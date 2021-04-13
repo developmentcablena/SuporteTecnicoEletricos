@@ -1,0 +1,384 @@
+[Root]
+Most Recent Package=Suporte Tecnico
+
+
+[Package|Suporte Técnico|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=c:\Documents and Settings\Robson\Desktop
+
+[Package|Suporte Técnico|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Suporte Técnico|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Suporte Técnico|Files Found]
+
+[Package|Suporte Técnico|Files Released]
+
+[Package|Suporte Técnico|Missing Dependency Information]
+C:\Arquivos de programas\Arquivos comuns\Data Dynamics\ActiveReports Pro\arpro2.dll=
+C:\Arquivos de programas\Arquivos comuns\Data Dynamics\ActiveReports Pro\PropList.OCX=
+C:\Arquivos de programas\Arquivos comuns\Data Dynamics\ActiveReports Pro\ardespro2.dll=
+C:\Arquivos de programas\Arquivos comuns\Data Dynamics\ActiveReports Pro\ARVIEW2.OCX=
+C:\Arquivos de programas\Arquivos comuns\System\ado\msado26.tlb=
+C:\WINDOWS\system32\vbSendMail.dll=
+C:\WINDOWS\system32\FPSPR70.ocx=
+C:\WINDOWS\system32\GridEX20.ocx=
+
+[Package|Suporte Técnico|Out-of-Date Dependency Information]
+C:\WINDOWS\system32\COMDLG32.OCX=
+
+[Package|Suporte Técnico|Files Added]
+
+[Package|Suporte Técnico|Files Removed]
+
+[Package|Suporte Técnico|Files In Project]
+C:\Documents and Settings\rsaito\Desktop\Suporte Técnico.exe=Yes
+C:\WINDOWS\system32\MSVBVM60.DLL=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\Arquivos de programas\Arquivos comuns\System\ado\msado26.tlb=Yes
+C:\WINDOWS\system32\MSCOMCTL.OCX=Yes
+C:\Arquivos de programas\Arquivos comuns\Data Dynamics\ActiveReports Pro\ARVIEW2.OCX=Yes
+C:\Arquivos de programas\Arquivos comuns\Data Dynamics\ActiveReports Pro\ardespro2.dll=Yes
+C:\Arquivos de programas\Arquivos comuns\Data Dynamics\ActiveReports Pro\PropList.OCX=Yes
+C:\Arquivos de programas\Arquivos comuns\Data Dynamics\ActiveReports Pro\arpro2.dll=Yes
+C:\WINDOWS\system32\MSMASK32.OCX=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINDOWS\system32\VB6STKIT.DLL=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+C:\WINDOWS\system32\vbSendMail.dll=Yes
+C:\WINDOWS\system32\MSMAPI32.OCX=Yes
+C:\WINDOWS\system32\COMDLG32.OCX=Yes
+C:\WINDOWS\system32\MSWINSCK.OCX=Yes
+C:\WINDOWS\system32\GridEX20.ocx=Yes
+C:\WINDOWS\system32\FPSPR70.ocx=Yes
+
+[Package|Suporte Técnico|Configure Registry Files]
+Applicable=No
+
+[Package|Suporte Técnico|Configure Remote Servers]
+Applicable=No
+
+[Package|Suporte Técnico|Install Locations]
+C:\Documents and Settings\rsaito\Desktop\Suporte Técnico.exe=$(AppPath)
+C:\WINDOWS\system32\MSVBVM60.DLL=$(WinSysPathSysFile)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Arquivos de programas\Arquivos comuns\System\ado\msado26.tlb=$(WinSysPath)
+C:\Arquivos de programas\Janus Systems Components\Janus GridEX 2000\OCXs Files\GridEX20.ocx=$(WinSysPath)
+C:\WINDOWS\system32\MSCOMCTL.OCX=$(WinSysPath)
+C:\Arquivos de programas\FarPoint Technologies\Spread70\Bin\FPSPR70.ocx=$(WinSysPath)
+C:\WINDOWS\system32\mfc42.dll=$(WinSysPathSysFile)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT.DLL=$(WinSysPathSysFile)
+C:\Arquivos de programas\Arquivos comuns\Data Dynamics\ActiveReports Pro\ARVIEW2.OCX=$(WinSysPath)
+C:\Arquivos de programas\Arquivos comuns\Data Dynamics\ActiveReports Pro\ardespro2.dll=$(WinSysPath)
+C:\Arquivos de programas\Arquivos comuns\Data Dynamics\ActiveReports Pro\PropList.OCX=$(WinSysPath)
+C:\Arquivos de programas\Arquivos comuns\Data Dynamics\ActiveReports Pro\arpro2.dll=$(WinSysPath)
+C:\WINDOWS\system32\MSMASK32.OCX=$(WinSysPath)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\WINDOWS\system32\vbSendMail.dll=$(WinSysPath)
+C:\WINDOWS\system32\MSMAPI32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\COMDLG32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSWINSCK.OCX=$(WinSysPath)
+C:\WINDOWS\system32\GridEX20.ocx=$(WinSysPath)
+C:\WINDOWS\system32\FPSPR70.ocx=$(WinSysPath)
+
+[Package|Suporte Técnico|Configure Shared Files]
+Applicable=Yes
+C:\Documents and Settings\rsaito\Desktop\Suporte Técnico.exe=No
+
+[Package|Suporte Técnico|Distribution]
+Type=single
+Size=
+Title=Suporte Técnico
+
+[Package|Suporte Técnico|IconGroups]
+Group0=Cablena do Brasil Ltda.
+PrivateGroup0=-1
+Parent0=$(Programs)
+
+[Package|Suporte Técnico|Cablena do Brasil Ltda.]
+Icon1="Suporte Técnico.exe"
+Title1=Suporte Técnico
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|Suporte Técnico|Package]
+PackageFolder=c:\Documents and Settings\Robson\Desktop
+ProjectFolder=\\192.168.0.1\sistemas$\Projetos\Sistema Help Desk Cablena\Vbp
+ServerSideCab=
+File1=c:\Documents and Settings\Robson\Desktop\setup.exe
+File2=c:\Documents and Settings\Robson\Desktop\Setup.Lst
+File3=c:\Documents and Settings\Robson\Desktop\Suporte Técnico.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+
+[Package|Suporte Técnico Elétricos|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=g:\Setups\Suporte Técnico Elétricos
+
+[Package|Suporte Técnico Elétricos|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Suporte Técnico Elétricos|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Suporte Técnico Elétricos|Files Found]
+
+[Package|Suporte Técnico Elétricos|Files Released]
+
+[Package|Suporte Técnico Elétricos|Missing Dependency Information]
+C:\Arquivos de programas\Arquivos comuns\Data Dynamics\ActiveReports Pro\arpro2.dll=
+C:\Arquivos de programas\Arquivos comuns\Data Dynamics\ActiveReports Pro\PropList.OCX=
+C:\Arquivos de programas\Arquivos comuns\Data Dynamics\ActiveReports Pro\ardespro2.dll=
+C:\Arquivos de programas\Arquivos comuns\Data Dynamics\ActiveReports Pro\ARVIEW2.OCX=
+C:\Arquivos de programas\Arquivos comuns\System\ado\msado26.tlb=
+C:\WINDOWS\system32\vbSendMail.dll=
+C:\WINDOWS\system32\FPSPR70.ocx=
+C:\WINDOWS\system32\GridEX20.ocx=
+
+[Package|Suporte Técnico Elétricos|Out-of-Date Dependency Information]
+C:\WINDOWS\system32\COMDLG32.OCX=
+
+[Package|Suporte Técnico Elétricos|Files Added]
+
+[Package|Suporte Técnico Elétricos|Files Removed]
+
+[Package|Suporte Técnico Elétricos|Files In Project]
+C:\WINDOWS\system32\MSVBVM60.DLL=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\Arquivos de programas\Arquivos comuns\System\ado\msado26.tlb=Yes
+C:\WINDOWS\system32\MSCOMCTL.OCX=Yes
+C:\Arquivos de programas\Arquivos comuns\Data Dynamics\ActiveReports Pro\ARVIEW2.OCX=Yes
+C:\Arquivos de programas\Arquivos comuns\Data Dynamics\ActiveReports Pro\ardespro2.dll=Yes
+C:\Arquivos de programas\Arquivos comuns\Data Dynamics\ActiveReports Pro\PropList.OCX=Yes
+C:\Arquivos de programas\Arquivos comuns\Data Dynamics\ActiveReports Pro\arpro2.dll=Yes
+C:\WINDOWS\system32\MSMASK32.OCX=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINDOWS\system32\VB6STKIT.DLL=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+C:\WINDOWS\system32\vbSendMail.dll=Yes
+C:\WINDOWS\system32\MSMAPI32.OCX=Yes
+C:\WINDOWS\system32\COMDLG32.OCX=Yes
+C:\WINDOWS\system32\MSWINSCK.OCX=Yes
+C:\WINDOWS\system32\GridEX20.ocx=Yes
+C:\WINDOWS\system32\FPSPR70.ocx=Yes
+G:\Setups\Suporte Técnico Elétricos\Suporte Técnico.exe=Yes
+
+[Package|Suporte Técnico Elétricos|Configure Registry Files]
+Applicable=No
+
+[Package|Suporte Técnico Elétricos|Configure Remote Servers]
+Applicable=No
+
+[Package|Suporte Técnico Elétricos|Install Locations]
+C:\Documents and Settings\rsaito\Desktop\Suporte Técnico.exe=$(AppPath)
+C:\WINDOWS\system32\MSVBVM60.DLL=$(WinSysPathSysFile)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Arquivos de programas\Arquivos comuns\System\ado\msado26.tlb=$(WinSysPath)
+C:\Arquivos de programas\Janus Systems Components\Janus GridEX 2000\OCXs Files\GridEX20.ocx=$(WinSysPath)
+C:\WINDOWS\system32\MSCOMCTL.OCX=$(WinSysPath)
+C:\Arquivos de programas\FarPoint Technologies\Spread70\Bin\FPSPR70.ocx=$(WinSysPath)
+C:\WINDOWS\system32\mfc42.dll=$(WinSysPathSysFile)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT.DLL=$(WinSysPathSysFile)
+C:\Arquivos de programas\Arquivos comuns\Data Dynamics\ActiveReports Pro\ARVIEW2.OCX=$(WinSysPath)
+C:\Arquivos de programas\Arquivos comuns\Data Dynamics\ActiveReports Pro\ardespro2.dll=$(WinSysPath)
+C:\Arquivos de programas\Arquivos comuns\Data Dynamics\ActiveReports Pro\PropList.OCX=$(WinSysPath)
+C:\Arquivos de programas\Arquivos comuns\Data Dynamics\ActiveReports Pro\arpro2.dll=$(WinSysPath)
+C:\WINDOWS\system32\MSMASK32.OCX=$(WinSysPath)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\WINDOWS\system32\vbSendMail.dll=$(WinSysPath)
+C:\WINDOWS\system32\MSMAPI32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\COMDLG32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSWINSCK.OCX=$(WinSysPath)
+C:\WINDOWS\system32\GridEX20.ocx=$(WinSysPath)
+C:\WINDOWS\system32\FPSPR70.ocx=$(WinSysPath)
+G:\Setups\Suporte Técnico Elétricos\Suporte Técnico.exe=$(AppPath)
+
+[Package|Suporte Técnico Elétricos|Configure Shared Files]
+Applicable=Yes
+C:\Documents and Settings\rsaito\Desktop\Suporte Técnico.exe=No
+G:\Setups\Suporte Técnico Elétricos\Suporte Técnico.exe=No
+
+[Package|Suporte Técnico Elétricos|Distribution]
+Type=single
+Size=
+Title=Suporte Técnico Elétricos
+
+[Package|Suporte Técnico Elétricos|IconGroups]
+Group0=Cablena do Brasil Ltda.
+PrivateGroup0=-1
+Parent0=$(Programs)
+
+[Package|Suporte Técnico Elétricos|Cablena do Brasil Ltda.]
+Icon1="Suporte Técnico.exe"
+Title1=Suporte Técnico Elétricos
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|Suporte Técnico Elétricos|Package]
+PackageFolder=g:\Setups\Suporte Técnico Elétricos
+ProjectFolder=\\192.168.0.1\sistemas$\Projetos\Sistema Help Desk Cablena\Vbp
+ServerSideCab=
+File1=g:\Setups\Suporte Técnico Elétricos\setup.exe
+File2=g:\Setups\Suporte Técnico Elétricos\Setup.Lst
+File3=g:\Setups\Suporte Técnico Elétricos\Suporte Técnico.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+
+[Package|Suporte Tecnico|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=d:\Projetos\Client\Cablena do Brasil\Sistema Help Desk Cablena - Em produção\Setup
+
+[Package|Suporte Tecnico|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Suporte Tecnico|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Suporte Tecnico|Files Found]
+
+[Package|Suporte Tecnico|Files Released]
+
+[Package|Suporte Tecnico|Missing Dependency Information]
+C:\Arquivos de programas\Arquivos comuns\Data Dynamics\ActiveReports Pro\arpro2.dll=
+C:\Arquivos de programas\Arquivos comuns\Data Dynamics\ActiveReports Pro\PropList.OCX=
+C:\Arquivos de programas\Arquivos comuns\Data Dynamics\ActiveReports Pro\ardespro2.dll=
+C:\Arquivos de programas\Arquivos comuns\Data Dynamics\ActiveReports Pro\ARVIEW2.OCX=
+C:\Arquivos de programas\Arquivos comuns\System\ado\msado26.tlb=
+C:\WINDOWS\system32\vbSendMail.dll=
+C:\WINDOWS\system32\FPSPR70.ocx=
+C:\WINDOWS\system32\GridEX20.ocx=
+
+[Package|Suporte Tecnico|Out-of-Date Dependency Information]
+C:\WINDOWS\system32\COMDLG32.OCX=
+C:\WINDOWS\system32\MSCOMCTL.OCX=
+C:\WINDOWS\system32\MSWINSCK.OCX=
+C:\WINDOWS\system32\MSMASK32.OCX=
+
+[Package|Suporte Tecnico|Files Added]
+
+[Package|Suporte Tecnico|Files Removed]
+
+[Package|Suporte Tecnico|Files In Project]
+C:\WINDOWS\system32\MSVBVM60.DLL=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\Arquivos de programas\Arquivos comuns\System\ado\msado26.tlb=Yes
+C:\WINDOWS\system32\MSCOMCTL.OCX=Yes
+C:\Arquivos de programas\Arquivos comuns\Data Dynamics\ActiveReports Pro\ARVIEW2.OCX=Yes
+C:\Arquivos de programas\Arquivos comuns\Data Dynamics\ActiveReports Pro\ardespro2.dll=Yes
+C:\Arquivos de programas\Arquivos comuns\Data Dynamics\ActiveReports Pro\PropList.OCX=Yes
+C:\Arquivos de programas\Arquivos comuns\Data Dynamics\ActiveReports Pro\arpro2.dll=Yes
+C:\WINDOWS\system32\MSMASK32.OCX=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINDOWS\system32\VB6STKIT.DLL=Yes
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+C:\WINDOWS\system32\vbSendMail.dll=Yes
+C:\WINDOWS\system32\MSMAPI32.OCX=Yes
+C:\WINDOWS\system32\COMDLG32.OCX=Yes
+C:\WINDOWS\system32\MSWINSCK.OCX=Yes
+C:\WINDOWS\system32\GridEX20.ocx=Yes
+C:\WINDOWS\system32\FPSPR70.ocx=Yes
+D:\Projetos\Client\Cablena do Brasil\Sistema Help Desk Cablena - Em produção\Setup\Suporte Técnico.exe=Yes
+
+[Package|Suporte Tecnico|Configure Registry Files]
+Applicable=No
+
+[Package|Suporte Tecnico|Configure Remote Servers]
+Applicable=No
+
+[Package|Suporte Tecnico|Install Locations]
+C:\Documents and Settings\rsaito\Desktop\Suporte Técnico.exe=$(AppPath)
+C:\WINDOWS\system32\MSVBVM60.DLL=$(WinSysPathSysFile)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Arquivos de programas\Arquivos comuns\System\ado\msado26.tlb=$(WinSysPath)
+C:\Arquivos de programas\Janus Systems Components\Janus GridEX 2000\OCXs Files\GridEX20.ocx=$(WinSysPath)
+C:\WINDOWS\system32\MSCOMCTL.OCX=$(WinSysPath)
+C:\Arquivos de programas\FarPoint Technologies\Spread70\Bin\FPSPR70.ocx=$(WinSysPath)
+C:\WINDOWS\system32\mfc42.dll=$(WinSysPathSysFile)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT.DLL=$(WinSysPathSysFile)
+C:\Arquivos de programas\Arquivos comuns\Data Dynamics\ActiveReports Pro\ARVIEW2.OCX=$(WinSysPath)
+C:\Arquivos de programas\Arquivos comuns\Data Dynamics\ActiveReports Pro\ardespro2.dll=$(WinSysPath)
+C:\Arquivos de programas\Arquivos comuns\Data Dynamics\ActiveReports Pro\PropList.OCX=$(WinSysPath)
+C:\Arquivos de programas\Arquivos comuns\Data Dynamics\ActiveReports Pro\arpro2.dll=$(WinSysPath)
+C:\WINDOWS\system32\MSMASK32.OCX=$(WinSysPath)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Arquivos de programas\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\WINDOWS\system32\vbSendMail.dll=$(WinSysPath)
+C:\WINDOWS\system32\MSMAPI32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\COMDLG32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSWINSCK.OCX=$(WinSysPath)
+C:\WINDOWS\system32\GridEX20.ocx=$(WinSysPath)
+C:\WINDOWS\system32\FPSPR70.ocx=$(WinSysPath)
+D:\Projetos\Client\Cablena do Brasil\Sistema Help Desk Cablena - Em produção\Setup\Suporte Técnico.exe=$(AppPath)
+
+[Package|Suporte Tecnico|Configure Shared Files]
+Applicable=Yes
+C:\Documents and Settings\rsaito\Desktop\Suporte Técnico.exe=No
+D:\Projetos\Client\Cablena do Brasil\Sistema Help Desk Cablena - Em produção\Setup\Suporte Técnico.exe=No
+
+[Package|Suporte Tecnico|Distribution]
+Type=single
+Size=
+Title=Suporte Tecnico
+
+[Package|Suporte Tecnico|IconGroups]
+Group0=Cablena do Brasil
+PrivateGroup0=False
+Parent0=$(Programs)
+
+[Package|Suporte Tecnico|Cablena do Brasil]
+Icon1="Suporte Tecnico.exe"
+Title1=Suporte Tecnico
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|Suporte Tecnico|Package]
+PackageFolder=d:\Projetos\Client\Cablena do Brasil\Sistema Help Desk Cablena - Em produção\Setup
+ProjectFolder=D:\Projetos\Client\Cablena do Brasil\Sistema Help Desk Cablena - Em produção\Vbp
+ServerSideCab=
+File1=d:\Projetos\Client\Cablena do Brasil\Sistema Help Desk Cablena - Em produção\Setup\setup.exe
+File2=d:\Projetos\Client\Cablena do Brasil\Sistema Help Desk Cablena - Em produção\Setup\Setup.Lst
+File3=d:\Projetos\Client\Cablena do Brasil\Sistema Help Desk Cablena - Em produção\Setup\Suporte Técnico.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
