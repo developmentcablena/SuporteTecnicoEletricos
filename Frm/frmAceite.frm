@@ -34,7 +34,10 @@ Begin VB.Form frmAceite
    Begin VB.TextBox txtOSID 
       Alignment       =   1  'Right Justify
       Appearance      =   0  'Flat
+<<<<<<< HEAD
       BackColor       =   &H80000018&
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
       Enabled         =   0   'False
       BeginProperty Font 
          Name            =   "Verdana"
@@ -70,7 +73,10 @@ Begin VB.Form frmAceite
    End
    Begin VB.TextBox txtComentario 
       Appearance      =   0  'Flat
+<<<<<<< HEAD
       BackColor       =   &H80000018&
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
       Height          =   1455
       Left            =   120
       MultiLine       =   -1  'True
@@ -160,7 +166,10 @@ Private Sub Form_Load()
 End Sub
 
 Private Sub suCadastrarAceite(ByVal vOSID As Integer, ByVal vComentario As String)
+<<<<<<< HEAD
 Call ConectarBD
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
     strSQL = "UPDATE tb_OS SET DataAceite = '" & Format(Now, "yyyy/MM/dd HH:mm:ss") & "',Comentario='" & vComentario & "', Status = 3 " & _
              "WHERE OSID = " & vOSID
     Set rs = New ADODB.Recordset
@@ -170,7 +179,10 @@ Call ConectarBD
 End Sub
 
 Private Sub suNaoValidar(ByVal vOSID As Integer, ByVal vMotivo As String)
+<<<<<<< HEAD
 Call ConectarBD
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
 Dim strDataOSNaoValidada As String
     
     strDataOSNaoValidada = Format(Now, "yyyy/MM/dd HH:mm:ss")
@@ -193,7 +205,10 @@ Dim strDataOSNaoValidada As String
 End Sub
 
 Private Sub suGravarOcorrencia(ByVal vOSID As Integer, ByVal vMotivo As String, ByVal vDataOcorrencia As String)
+<<<<<<< HEAD
 Call ConectarBD
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
     strSQL = "INSERT INTO tb_Ocorrencias (Ocorrencia,DataOcorrencia, Status,OSID) " & _
              "VALUES ('" & vMotivo & "','" & CDate(vDataOcorrencia) & "',1," & vOSID & " )"
     Set rs = New ADODB.Recordset
@@ -203,7 +218,10 @@ Call ConectarBD
 End Sub
 
 Private Function fnPesquisarOcorrencia(ByVal vOSID As Integer) As Boolean
+<<<<<<< HEAD
 Call ConectarBD
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
     fnPesquisarOcorrencia = False
     strOcorrencia = ""
     strDataOcorrencia = ""

@@ -25,7 +25,10 @@ Begin VB.Form frmAlterarSenha
    StartUpPosition =   1  'CenterOwner
    Begin VB.TextBox txtConfirmar 
       Appearance      =   0  'Flat
+<<<<<<< HEAD
       BackColor       =   &H80000018&
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
       Height          =   285
       IMEMode         =   3  'DISABLE
       Left            =   120
@@ -36,7 +39,10 @@ Begin VB.Form frmAlterarSenha
    End
    Begin VB.TextBox txtSenhaAtual 
       Appearance      =   0  'Flat
+<<<<<<< HEAD
       BackColor       =   &H80000018&
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
       Height          =   285
       IMEMode         =   3  'DISABLE
       Left            =   120
@@ -47,7 +53,10 @@ Begin VB.Form frmAlterarSenha
    End
    Begin VB.TextBox txtNovaSenha 
       Appearance      =   0  'Flat
+<<<<<<< HEAD
       BackColor       =   &H80000018&
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
       Height          =   285
       IMEMode         =   3  'DISABLE
       Left            =   120
@@ -232,7 +241,10 @@ Private Sub txtSenhaAtual_KeyPress(KeyAscii As Integer)
 End Sub
 
 Private Sub suAlterarSenha(ByVal vUsuarioID As Integer, ByVal vSenha As String)
+<<<<<<< HEAD
 Call ConectarBD
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
 On Error GoTo Erro
     strSQL = "UPDATE tb_Usuarios SET Senha = '" & vSenha & "',AlterarSenha = 0 WHERE UsuarioID = " & vUsuarioID & ""
     Set rs = New ADODB.Recordset

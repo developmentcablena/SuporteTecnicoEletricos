@@ -41,7 +41,10 @@ Begin VB.Form frmLogin
    End
    Begin VB.TextBox txtSenha 
       Appearance      =   0  'Flat
+<<<<<<< HEAD
       BackColor       =   &H80000018&
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
       Height          =   285
       IMEMode         =   3  'DISABLE
       Left            =   120
@@ -53,7 +56,10 @@ Begin VB.Form frmLogin
    End
    Begin VB.TextBox txtUsuario 
       Appearance      =   0  'Flat
+<<<<<<< HEAD
       BackColor       =   &H80000018&
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
       Height          =   285
       Left            =   120
       MaxLength       =   15
@@ -179,7 +185,11 @@ Private Function fnValidarUsuario(ByVal vUsuario As String, ByVal vSenha As Stri
     rs.Open strSQL, cn, adOpenForwardOnly, adLockReadOnly
     
     If rs.EOF = False Then
+<<<<<<< HEAD
         gintUsuarioID = rs!usuarioID
+=======
+        gintUsuarioID = rs!UsuarioID
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
         gstrNome = rs!Nome
         gstrDepto = rs!Departamento
         gstrEMail = rs!EMail

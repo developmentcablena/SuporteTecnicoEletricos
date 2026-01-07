@@ -1,8 +1,14 @@
 VERSION 5.00
+<<<<<<< HEAD
 Object = "{C932BA88-4374-101B-A56C-00AA003668DC}#1.1#0"; "msmask32.ocx"
 Begin VB.Form frmReporteTecnico 
    Appearance      =   0  'Flat
    BackColor       =   &H80000004&
+=======
+Object = "{C932BA88-4374-101B-A56C-00AA003668DC}#1.1#0"; "MSMASK32.OCX"
+Begin VB.Form frmReporteTecnico 
+   Appearance      =   0  'Flat
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
    BorderStyle     =   1  'Fixed Single
    Caption         =   "Suporte Técnico - Reporte"
    ClientHeight    =   4245
@@ -28,7 +34,10 @@ Begin VB.Form frmReporteTecnico
    Begin VB.TextBox txtOSID 
       Alignment       =   1  'Right Justify
       Appearance      =   0  'Flat
+<<<<<<< HEAD
       BackColor       =   &H80000018&
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
       Enabled         =   0   'False
       BeginProperty Font 
          Name            =   "Verdana"
@@ -74,7 +83,10 @@ Begin VB.Form frmReporteTecnico
       _Version        =   393216
       ClipMode        =   1
       Appearance      =   0
+<<<<<<< HEAD
       BackColor       =   -2147483624
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
       MaxLength       =   16
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "Verdana"
@@ -90,7 +102,10 @@ Begin VB.Form frmReporteTecnico
    End
    Begin VB.TextBox txtReporteTecnico 
       Appearance      =   0  'Flat
+<<<<<<< HEAD
       BackColor       =   &H80000018&
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
       Height          =   2415
       Left            =   120
       MaxLength       =   500
@@ -249,7 +264,10 @@ End Sub
 'End Sub
 
 Private Function fnPesquisarBaixa(ByVal vOSID As Integer) As Boolean
+<<<<<<< HEAD
 Call ConectarBD
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
     
     strMotivoOSNaoValidada = ""
     strDataOSNaoValidada = ""
@@ -297,7 +315,11 @@ Dim rs1 As New ADODB.Recordset
         rs1.Open strSQL, cn, adOpenForwardOnly, adLockReadOnly
         
         If rs1.EOF = False Then
+<<<<<<< HEAD
             fnCapturarEmailAtendente = rs1!EMail & ""
+=======
+            fnCapturarEmailAtendente = rs1!Email & ""
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
         End If
         
         rs1.Close
@@ -331,7 +353,11 @@ Private Function fnCapturarEMail(ByVal vOSID As Long) As String
     rs.Open strSQL, cn, adOpenForwardOnly, adLockReadOnly
     
     If rs.EOF = False Then
+<<<<<<< HEAD
         fnCapturarEMail = rs!EMail & ""
+=======
+        fnCapturarEMail = rs!Email & ""
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
     End If
     
     rs.Close
@@ -406,7 +432,11 @@ Private Function fnContaSMTP() As String
     rs.Open strSQL, cn, adOpenForwardOnly, adLockReadOnly
     
     If rs.EOF = False Then
+<<<<<<< HEAD
         fnContaSMTP = Trim(rs!valor)
+=======
+        fnContaSMTP = Trim(rs!Valor)
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
     End If
     
     rs.Close
@@ -421,7 +451,11 @@ Private Function fnSenhaSMTP() As String
     rs.Open strSQL, cn, adOpenForwardOnly, adLockReadOnly
     
     If rs.EOF = False Then
+<<<<<<< HEAD
         fnSenhaSMTP = Trim(rs!valor)
+=======
+        fnSenhaSMTP = Trim(rs!Valor)
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
     End If
     
     rs.Close

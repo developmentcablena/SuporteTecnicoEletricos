@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Line 14: Property Size in Font had an invalid value.
 Line 238: Property Size in Font had an invalid value.
 Line 260: Property Size in Font had an invalid value.
@@ -16,3 +17,6 @@ Line 326: Property Size in Font had an invalid value.
 Line 348: Property Size in Font had an invalid value.
 Line 370: Property Size in Font had an invalid value.
 Line 392: Property Size in Font had an invalid value.
+=======
+Line 150: Class MSComctlLib.ProgressBar of control pgbProgresso was not a loaded control class.
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812

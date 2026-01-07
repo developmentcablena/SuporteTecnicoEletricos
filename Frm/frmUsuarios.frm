@@ -1,5 +1,9 @@
 VERSION 5.00
+<<<<<<< HEAD
 Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.1#0"; "MSCOMCTL.OCX"
+=======
+Object = "{E684D8A3-716C-4E59-AA94-7144C04B0074}#1.1#0"; "GridEX20.ocx"
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
 Begin VB.Form frmUsuarios 
    Appearance      =   0  'Flat
    BorderStyle     =   1  'Fixed Single
@@ -24,6 +28,7 @@ Begin VB.Form frmUsuarios
    ScaleHeight     =   5745
    ScaleWidth      =   7575
    StartUpPosition =   1  'CenterOwner
+<<<<<<< HEAD
    Begin MSComctlLib.ListView lvwPermissao 
       Height          =   1575
       Left            =   3240
@@ -66,6 +71,8 @@ Begin VB.Form frmUsuarios
       Appearance      =   1
       NumItems        =   0
    End
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
    Begin VB.CommandButton cmdRemover 
       Caption         =   "-"
       Height          =   300
@@ -288,6 +295,80 @@ Begin VB.Form frmUsuarios
          Width           =   495
       End
    End
+<<<<<<< HEAD
+=======
+   Begin GridEX20.GridEX gexUsuarios 
+      Height          =   4965
+      Left            =   120
+      TabIndex        =   0
+      Top             =   210
+      Width           =   3015
+      _ExtentX        =   5318
+      _ExtentY        =   8758
+      Version         =   "2.0"
+      AutomaticSort   =   -1  'True
+      BoundColumnIndex=   ""
+      ReplaceColumnIndex=   ""
+      ColumnAutoResize=   -1  'True
+      MultiSelect     =   -1  'True
+      HeaderStyle     =   2
+      MethodHoldFields=   -1  'True
+      AllowColumnDrag =   0   'False
+      AllowEdit       =   0   'False
+      GroupByBoxVisible=   0   'False
+      ColumnHeaderHeight=   285
+      IntProp1        =   0
+      ColumnsCount    =   3
+      Column(1)       =   "frmUsuarios.frx":08CA
+      Column(2)       =   "frmUsuarios.frx":0A82
+      Column(3)       =   "frmUsuarios.frx":0BCA
+      FmtConditionsCount=   1
+      FmtCondition(1) =   "frmUsuarios.frx":0D0A
+      FormatStylesCount=   5
+      FormatStyle(1)  =   "frmUsuarios.frx":0ED6
+      FormatStyle(2)  =   "frmUsuarios.frx":1002
+      FormatStyle(3)  =   "frmUsuarios.frx":10B2
+      FormatStyle(4)  =   "frmUsuarios.frx":1166
+      FormatStyle(5)  =   "frmUsuarios.frx":123E
+      ImageCount      =   0
+      PrinterProperties=   "frmUsuarios.frx":12F6
+   End
+   Begin GridEX20.GridEX gexPermissoes 
+      Height          =   1695
+      Left            =   3240
+      TabIndex        =   20
+      Top             =   3480
+      Width           =   4215
+      _ExtentX        =   7435
+      _ExtentY        =   2990
+      Version         =   "2.0"
+      AutomaticSort   =   -1  'True
+      RecordNavigator =   -1  'True
+      BoundColumnIndex=   ""
+      ReplaceColumnIndex=   ""
+      ColumnAutoResize=   -1  'True
+      MultiSelect     =   -1  'True
+      HeaderStyle     =   2
+      MethodHoldFields=   -1  'True
+      AllowColumnDrag =   0   'False
+      GroupByBoxVisible=   0   'False
+      ColumnHeaderHeight=   285
+      IntProp1        =   0
+      ColumnsCount    =   4
+      Column(1)       =   "frmUsuarios.frx":14C6
+      Column(2)       =   "frmUsuarios.frx":16B6
+      Column(3)       =   "frmUsuarios.frx":182A
+      Column(4)       =   "frmUsuarios.frx":19C2
+      FormatStylesCount=   5
+      FormatStyle(1)  =   "frmUsuarios.frx":1B8A
+      FormatStyle(2)  =   "frmUsuarios.frx":1CB6
+      FormatStyle(3)  =   "frmUsuarios.frx":1D66
+      FormatStyle(4)  =   "frmUsuarios.frx":1E1A
+      FormatStyle(5)  =   "frmUsuarios.frx":1EF2
+      ImageCount      =   0
+      PrinterProperties=   "frmUsuarios.frx":1FAA
+   End
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
    Begin VB.Label lblPermissoes 
       Appearance      =   0  'Flat
       AutoSize        =   -1  'True
@@ -312,11 +393,16 @@ Private strSQL As String
 
 Private Sub cmdAdicionar_Click()
     If Len(Trim(cboModulos.Text)) = 0 Then
+<<<<<<< HEAD
         MsgBox "Selecione um módulo!", vbOKOnly + vbExclamation, "Suporte Manutenção"
+=======
+        MsgBox "Selecione um módulo!", vbOKOnly + vbExclamation, "Suporte Técnico"
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
         cboModulos.SetFocus
         Exit Sub
     End If
     
+<<<<<<< HEAD
      'MsgBox "Permissao: " & Me.lvwPermissao.ListItems(1).Text          'Me.lvwPermissao.ListItems(1).Text
      'MsgBox "Usuarios: " & vIDusuarioReal
     
@@ -327,6 +413,14 @@ Private Sub cmdAdicionar_Click()
         Call suAdicionarModulo(vIDusuarioReal, cboModulos.Text)
         Call suMostrarPermissoes(vIDusuarioReal)
         
+=======
+    If cmdNovo.Enabled = True Then
+        Call suAdicionarModulo(gintNovoUsuarioID, cboModulos.Text)
+        Call suMostrarPermissoes(gintNovoUsuarioID)
+    ElseIf cmdEditar.Enabled = True Then
+        Call suAdicionarModulo(gexUsuarios.Value(1), cboModulos.Text)
+        Call suMostrarPermissoes(gexUsuarios.Value(1))
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
     End If
 End Sub
 
@@ -368,6 +462,7 @@ End Sub
 
 Private Sub cmdRemover_Click()
 Dim i As Integer
+<<<<<<< HEAD
 Dim permissaoID As Integer
 Dim usuarioID As Integer
 
@@ -387,13 +482,28 @@ Dim usuarioID As Integer
             Call suRemoverModulo(Me.lvwPermissao.ListItems(i).SubItems(2), Me.lvwPermissao.ListItems(i).SubItems(3))
             Call suMostrarPermissoes(vIDusuarioReal)
             
+=======
+    
+    If gexPermissoes.RowCount = 0 Then
+        MsgBox "Usuário não possue nenhuma permissão!", vbOKOnly + vbExclamation, "Suporte Técnico"
+        Exit Sub
+    End If
+    
+    For i = 1 To gexPermissoes.RowCount
+        If gexPermissoes.RowSelected(i) = True Then
+            Call suRemoverModulo(gexPermissoes.Value(1), gexUsuarios.Value(1))
+            Call suMostrarPermissoes(gexUsuarios.Value(1))
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
         End If
     Next
     
 End Sub
 
 Private Sub cmdSalvar_Click()
+<<<<<<< HEAD
 Dim i As Integer
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
     If Len(Trim(txtNome.Text)) = 0 Then
         MsgBox "Digite o nome do usuário!", vbOKOnly + vbExclamation, "Suporte Técnico"
         txtNome.SetFocus
@@ -442,6 +552,7 @@ Dim i As Integer
                 Call suHabilitarPermissoes(True)
             End If
         Else
+<<<<<<< HEAD
             If fnAtualizar(vIDusuarioReal, Trim(txtDepto.Text), Trim(txtEMail.Text), CodDec(Trim(txtSenha.Text)), chkInativo, chkAlterar) = True Then
                 For i = 1 To Me.lvwPermissao.ListItems.Count
                     If fnAtualizarPermissao(Abs(Me.lvwPermissao.ListItems(1).Checked), Me.lvwPermissao.ListItems(1).SubItems(2)) = True Then
@@ -478,24 +589,68 @@ End With
         
        
     End With
+=======
+            If fnAtualizar(gexUsuarios.Value(1), Trim(txtDepto.Text), Trim(txtEMail.Text), CodDec(Trim(txtSenha.Text)), chkInativo, chkAlterar) = True Then
+                MsgBox "Atualizações efetuadas com sucesso!", vbOKOnly + vbInformation, "Suporte Técnico"
+                Call suListarUsuarios
+                Call suHabilitarDados(False)
+                Call suHabilitarPermissoes(False)
+                chkEmBranco.Value = 0
+            End If
+        End If
+    End If
+End Sub
+
+Private Sub Form_Load()
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
     Call suListarUsuarios
     Call suHabilitarDados(False)
     Call suHabilitarPermissoes(False)
     Call suListarModulos
 End Sub
 
+<<<<<<< HEAD
 
+=======
+Private Sub gexUsuarios_Click()
+Dim i As Integer
+
+    If gexUsuarios.RowCount > 0 Then
+        For i = 1 To gexUsuarios.RowCount
+            If gexUsuarios.RowSelected(i) = True Then
+                Call suLimparDados
+                Call suLimparGridPermissoes
+                Call suHabilitarDados(False)
+                Call suHabilitarPermissoes(False)
+                Call suMostrarDados(gexUsuarios.Value(1))
+                Call suMostrarPermissoes(gexUsuarios.Value(1))
+                cmdNovo.Enabled = True
+                cmdEditar.Enabled = True
+                cmdSalvar.Caption = "&Salvar"
+            End If
+        Next
+    End If
+    
+End Sub
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
 
 Private Sub suHabilitarPermissoes(ByVal vBoolean As Boolean)
     lblPermissoes.Enabled = vBoolean
     cboModulos.Enabled = vBoolean
     cmdAdicionar.Enabled = vBoolean
     cmdRemover.Enabled = vBoolean
+<<<<<<< HEAD
     Me.lvwPermissao.Enabled = vBoolean
 End Sub
 
 Private Sub suRemoverModulo(ByVal vPermissaoID As Integer, ByVal vUsuarioID As Integer)
 Call ConectarBD
+=======
+    gexPermissoes.Enabled = vBoolean
+End Sub
+
+Private Sub suRemoverModulo(ByVal vPermissaoID As Integer, ByVal vUsuarioID As Integer)
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
     strSQL = "DELETE FROM tb_Permissoes WHERE PermissaoID = " & vPermissaoID & " AND UsuarioID = " & vUsuarioID
     Set rs = New ADODB.Recordset
     rs.Open strSQL, cn, adOpenKeyset, adLockOptimistic
@@ -504,6 +659,7 @@ Call ConectarBD
 End Sub
 
 Private Sub suAdicionarModulo(ByVal vUsuarioID As Integer, ByVal vModulo As String)
+<<<<<<< HEAD
 
 
 Call ConectarBD
@@ -515,11 +671,22 @@ Call ConectarBD
     
   
     
+=======
+    strSQL = "INSERT INTO tb_Permissoes " & _
+             "(Modulo,Permissao,UsuarioID) " & _
+             "VALUES ('" & vModulo & "',0," & vUsuarioID & ")"
+    Set rs = New ADODB.Recordset
+    rs.Open strSQL, cn, adOpenKeyset, adLockOptimistic
+    
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
     Set rs = Nothing
 End Sub
 
 Private Sub suListarModulos()
+<<<<<<< HEAD
 Call ConectarBD
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
     strSQL = "SELECT * FROM vw_Modulos ORDER BY Modulo"
     Set rs = New ADODB.Recordset
     rs.Open strSQL, cn, adOpenForwardOnly, adLockReadOnly
@@ -533,6 +700,7 @@ Call ConectarBD
     Set rs = Nothing
 End Sub
 
+<<<<<<< HEAD
 Private Function fnAtualizarPermissao(ByVal vPermissao As Integer, ByVal vPermissaoID As Integer) As Boolean
 Call ConectarBD
 On Error GoTo Erro
@@ -559,6 +727,9 @@ End Function
 
 Private Function fnAtualizar(ByVal vUsuarioID As Integer, ByVal vDepto As String, ByVal vEMail As String, ByVal vSenha As String, ByRef vInativo As CheckBox, ByVal vAlterarSenha As CheckBox) As Boolean
 Call ConectarBD
+=======
+Private Function fnAtualizar(ByVal vUsuarioID As Integer, ByVal vDepto As String, ByVal vEMail As String, ByVal vSenha As String, ByRef vInativo As CheckBox, ByVal vAlterarSenha As CheckBox) As Boolean
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
 On Error GoTo Erro
     
     fnAtualizar = False
@@ -566,12 +737,19 @@ On Error GoTo Erro
     strSQL = "UPDATE tb_Usuarios SET Departamento = '" & vDepto & "',EMail = '" & vEMail & "',Senha = '" & vSenha & "',Inativo = " & vInativo & ",AlterarSenha = " & vAlterarSenha & " WHERE UsuarioID = " & vUsuarioID & " "
     Set rs = New ADODB.Recordset
     rs.Open strSQL, cn, adOpenKeyset, adLockOptimistic
+<<<<<<< HEAD
   
     fnAtualizar = True
     Set rs = Nothing
     Exit Function
     
     
+=======
+    
+    fnAtualizar = True
+    Set rs = Nothing
+    Exit Function
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
 
 Erro:
     If rs.State = adStateOpen Then rs.Close
@@ -580,7 +758,10 @@ Erro:
 End Function
 
 Private Function fnCadastrarUsuario(ByVal vNome As String, ByVal vUsuario As String, ByVal vSenha As String, ByVal vDepto As String, ByVal vEMail As String, ByRef vInativo As CheckBox, ByRef vAlterarSenha As CheckBox) As Boolean
+<<<<<<< HEAD
 Call ConectarBD
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
 On Error GoTo Erro
 
     fnCadastrarUsuario = False
@@ -604,7 +785,11 @@ On Error GoTo Erro
         rs!Inativo = vInativo
         rs!AlterarSenha = vAlterarSenha
         rs.Update
+<<<<<<< HEAD
         gintNovoUsuarioID = rs!usuarioID
+=======
+        gintNovoUsuarioID = rs!UsuarioID
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
         
         fnCadastrarUsuario = True
         Set rs = Nothing
@@ -631,7 +816,21 @@ Private Sub suLimparDados()
 End Sub
 
 Private Sub suLimparGridPermissoes()
+<<<<<<< HEAD
 Me.lvwPermissao.ListItems.Clear
+=======
+    strSQL = "SELECT * FROM vw_Permissoes WHERE 1=2"
+    Set rs = New ADODB.Recordset
+    rs.Open strSQL, cn, adOpenForwardOnly, adLockReadOnly
+    
+    If rs.EOF = True Then
+        gexPermissoes.HoldFields
+        Set gexPermissoes.ADORecordset = rs
+    End If
+    
+    rs.Close
+    Set rs = Nothing
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
 End Sub
 
 Private Sub suHabilitarDados(ByVal vBoolean As Boolean)
@@ -648,6 +847,7 @@ Private Sub suHabilitarDados(ByVal vBoolean As Boolean)
     chkEmBranco.Enabled = vBoolean
 End Sub
 
+<<<<<<< HEAD
 Private Sub CheckItem(index As Integer, check As Boolean)
     ' Verifica o estado do item e marca o checkbox
     Me.lvwPermissao.ListItems(index).Checked = check
@@ -702,6 +902,22 @@ Call ConectarBD
 
     Set rs = Nothing
     Set cn = Nothing
+=======
+Private Sub suMostrarPermissoes(ByVal vUsuarioID As Integer)
+    strSQL = "SELECT * FROM vw_Permissoes WHERE UsuarioID = " & vUsuarioID & " ORDER BY Modulo "
+    Set rs = New ADODB.Recordset
+    rs.Open strSQL, cn, adOpenKeyset, adLockOptimistic
+    
+    If rs.EOF = False Then
+        gexPermissoes.HoldFields
+        Set gexPermissoes.ADORecordset = rs
+    Else
+        gexPermissoes.HoldFields
+        Set gexPermissoes.ADORecordset = rs
+    End If
+    
+    Set rs = Nothing
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
 End Sub
 
 Private Sub suMostrarDados(ByVal vUsuarioID As Integer)
@@ -723,12 +939,16 @@ Private Sub suMostrarDados(ByVal vUsuarioID As Integer)
 End Sub
 
 Private Sub suListarUsuarios()
+<<<<<<< HEAD
 Dim lvwItem As ListItem
 Call ConectarBD
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
     strSQL = "SELECT * FROM vw_Usuarios ORDER BY Nome"
     Set rs = New ADODB.Recordset
     rs.Open strSQL, cn, adOpenForwardOnly, adLockReadOnly
     
+<<<<<<< HEAD
     Me.lvwUsuarios.ListItems.Clear
     
     If rs.EOF = False Then
@@ -782,5 +1002,16 @@ Dim i As Integer
         Next
     End If
 
+=======
+    If rs.EOF = False Then
+        gexUsuarios.HoldFields
+        Set gexUsuarios.ADORecordset = rs
+    Else
+        gexUsuarios.HoldFields
+        Set gexUsuarios.ADORecordset = rs
+    End If
+    
+    Set rs = Nothing
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
 End Sub
 

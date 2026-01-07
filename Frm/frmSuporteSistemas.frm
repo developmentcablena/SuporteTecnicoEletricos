@@ -26,7 +26,10 @@ Begin VB.Form frmSuporteSistemas
    StartUpPosition =   1  'CenterOwner
    Begin VB.TextBox txtReporteTecnico 
       Appearance      =   0  'Flat
+<<<<<<< HEAD
       BackColor       =   &H80000018&
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
       Height          =   1695
       Left            =   120
       MultiLine       =   -1  'True
@@ -57,7 +60,10 @@ Begin VB.Form frmSuporteSistemas
    Begin VB.TextBox txtPrevisao 
       Alignment       =   2  'Center
       Appearance      =   0  'Flat
+<<<<<<< HEAD
       BackColor       =   &H80000018&
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
       Enabled         =   0   'False
       Height          =   285
       Left            =   1560
@@ -68,7 +74,10 @@ Begin VB.Form frmSuporteSistemas
    Begin VB.TextBox txtPrazo 
       Alignment       =   1  'Right Justify
       Appearance      =   0  'Flat
+<<<<<<< HEAD
       BackColor       =   &H80000018&
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
       Height          =   285
       Left            =   120
       TabIndex        =   4
@@ -95,7 +104,10 @@ Begin VB.Form frmSuporteSistemas
    End
    Begin VB.TextBox txtObservacao 
       Appearance      =   0  'Flat
+<<<<<<< HEAD
       BackColor       =   &H80000018&
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
       Height          =   1695
       Left            =   120
       MaxLength       =   500
@@ -107,7 +119,10 @@ Begin VB.Form frmSuporteSistemas
    End
    Begin VB.ComboBox cboEspecificacao 
       Appearance      =   0  'Flat
+<<<<<<< HEAD
       BackColor       =   &H80000018&
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
       Height          =   315
       Left            =   120
       Style           =   2  'Dropdown List
@@ -117,7 +132,10 @@ Begin VB.Form frmSuporteSistemas
    End
    Begin VB.ComboBox cboTipo 
       Appearance      =   0  'Flat
+<<<<<<< HEAD
       BackColor       =   &H80000018&
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
       Height          =   315
       Left            =   3360
       Style           =   2  'Dropdown List
@@ -127,7 +145,10 @@ Begin VB.Form frmSuporteSistemas
    End
    Begin VB.ComboBox cboDivisao 
       Appearance      =   0  'Flat
+<<<<<<< HEAD
       BackColor       =   &H80000018&
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
       Height          =   315
       Left            =   120
       Style           =   2  'Dropdown List
@@ -498,13 +519,22 @@ On Error GoTo Erro
         rs!DivisaoID = 0 & vDivisaoID
         rs!TipoID = 0 & vTipoID
         rs!EspecificacaoID = 0 & vEspecificacaoID
+<<<<<<< HEAD
         rs!usuarioID = vUsuarioID
         rs!EMail = vEMail & ""
+=======
+        rs!UsuarioID = vUsuarioID
+        rs!Email = vEMail & ""
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
         rs!DescricaoServico = vDescricao & ""
         rs!Prioridade = vPrioridade
         rs!Prazo = 0 & vPrazo
         rs!Previsao = vPrevisao
+<<<<<<< HEAD
         rs!Datacadastro = Format(Now, "dd/MM/yyyy HH:mm:ss")
+=======
+        rs!DataCadastro = Format(Now, "dd/MM/yyyy HH:mm:ss")
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
         rs!Status = 0
         rs.Update
         gintOSID = rs!OSID
@@ -538,13 +568,24 @@ Dim poSendMail As vbSendMail.clsSendMail
     poSendMail.SMTPHost = "email-ssl.com.br"
     poSendMail.SMTPPort = "587"
     poSendMail.UseAuthentication = True
+<<<<<<< HEAD
+=======
+    'poSendMail.UserName = "sistema-interno@cablena.com.br"
+    'poSendMail.Password = "Adm1nPW#2606"
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
     poSendMail.UserName = fnContaSMTP
     poSendMail.Password = fnSenhaSMTP
     poSendMail.From = fnContaSMTP
     poSendMail.FromDisplayName = vUsuario
+<<<<<<< HEAD
     poSendMail.Recipient = "ti@cablena.com.br" 'colocar email ti
     poSendMail.RecipientDisplayName = "ADM Suporte Técnico"
     poSendMail.Subject = "Nova OS TELECOM " & Format(vOSID, "0000")
+=======
+    poSendMail.Recipient = "rsaito@cablena.com.br"
+    poSendMail.RecipientDisplayName = "ADM Suporte Técnico"
+    poSendMail.Subject = "Nova OS " & Format(vOSID, "0000")
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
     poSendMail.Priority = HIGH_PRIORITY
     Call suRelatorio(vOSID)
     poSendMail.Message = strRelatorio
@@ -572,7 +613,11 @@ Private Function fnContaSMTP() As String
     rs.Open strSQL, cn, adOpenForwardOnly, adLockReadOnly
     
     If rs.EOF = False Then
+<<<<<<< HEAD
         fnContaSMTP = Trim(rs!valor)
+=======
+        fnContaSMTP = Trim(rs!Valor)
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
     End If
     
     rs.Close
@@ -587,7 +632,11 @@ Private Function fnSenhaSMTP() As String
     rs.Open strSQL, cn, adOpenForwardOnly, adLockReadOnly
     
     If rs.EOF = False Then
+<<<<<<< HEAD
         fnSenhaSMTP = Trim(rs!valor)
+=======
+        fnSenhaSMTP = Trim(rs!Valor)
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
     End If
     
     rs.Close
@@ -605,7 +654,11 @@ Private Sub suRelatorio(ByVal vOSID As Long)
         strRelatorio = strRelatorio & "Nº OS: " & Format(rs!OSID, "0000") & vbCrLf & vbCrLf
         strRelatorio = strRelatorio & "Tipo: " & rs!Divisao & String(10, " ") & "Caract.: " & rs!Tipo & String(10, " ") & "Especificação: " & rs!Especificacao & vbCrLf & vbCrLf
         strRelatorio = strRelatorio & "Reporte Usuário: " & rs!DescricaoServico & vbCrLf & vbCrLf
+<<<<<<< HEAD
         strRelatorio = strRelatorio & "Data Cadastro: " & Format(rs!Datacadastro, "dd/MM/yy HH:mm") & vbCrLf & vbCrLf
+=======
+        strRelatorio = strRelatorio & "Data Cadastro: " & Format(rs!DataCadastro, "dd/MM/yy HH:mm") & vbCrLf & vbCrLf
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
         strRelatorio = strRelatorio & String(100, "=")
     End If
     

@@ -23,7 +23,10 @@ Private rs As ADODB.Recordset
 Private strSQL As String
 
 Private Sub suGerarOS(ByVal vOSID As Integer)
+<<<<<<< HEAD
 Call ConectarBD
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
     strSQL = "SELECT * FROM vw_Chamados WHERE OSID = " & vOSID
     Set rs = New ADODB.Recordset
     rs.Open strSQL, cn, adOpenForwardOnly, adLockReadOnly
@@ -31,7 +34,11 @@ Call ConectarBD
     If rs.EOF = False Then
         With acrOS
             .fldOSID = Format(rs!OSID, "0000")
+<<<<<<< HEAD
             .fldDataCadastro.Text = Format(rs!Datacadastro, "dd/MM/yyyy HH:mm:ss")
+=======
+            .fldDataCadastro.Text = Format(rs!DataCadastro, "dd/MM/yyyy HH:mm:ss")
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
             .fldDataPrevisao.Text = Format(rs!Previsao, "dd/MM/yyyy")
             .fldSolicitante.Text = rs!Nome
             .fldDepartamento.Text = rs!Departamento

@@ -1,5 +1,9 @@
 VERSION 5.00
+<<<<<<< HEAD
 Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.1#0"; "MSCOMCTL.OCX"
+=======
+Object = "{E684D8A3-716C-4E59-AA94-7144C04B0074}#1.1#0"; "GridEX20.ocx"
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
 Begin VB.Form frmOcorrencias 
    Appearance      =   0  'Flat
    BorderStyle     =   1  'Fixed Single
@@ -24,6 +28,7 @@ Begin VB.Form frmOcorrencias
    ScaleHeight     =   6015
    ScaleWidth      =   8190
    StartUpPosition =   1  'CenterOwner
+<<<<<<< HEAD
    Begin MSComctlLib.ListView lvwOcorrencia 
       Height          =   5415
       Left            =   0
@@ -45,6 +50,8 @@ Begin VB.Form frmOcorrencias
       Appearance      =   1
       NumItems        =   0
    End
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
    Begin VB.CommandButton cmdFechar 
       Appearance      =   0  'Flat
       Caption         =   "Fechar"
@@ -54,6 +61,45 @@ Begin VB.Form frmOcorrencias
       Top             =   5520
       Width           =   1335
    End
+<<<<<<< HEAD
+=======
+   Begin GridEX20.GridEX gexOcorrencias 
+      Height          =   5055
+      Left            =   120
+      TabIndex        =   0
+      Top             =   360
+      Width           =   7935
+      _ExtentX        =   13996
+      _ExtentY        =   8916
+      Version         =   "2.0"
+      AllowRowSizing  =   -1  'True
+      RecordNavigator =   -1  'True
+      BoundColumnIndex=   ""
+      ReplaceColumnIndex=   ""
+      HeaderStyle     =   2
+      MethodHoldFields=   -1  'True
+      AllowColumnDrag =   0   'False
+      AllowEdit       =   0   'False
+      BorderStyle     =   3
+      GroupByBoxVisible=   0   'False
+      RowHeaders      =   -1  'True
+      ColumnHeaderHeight=   285
+      IntProp1        =   0
+      ColumnsCount    =   4
+      Column(1)       =   "frmOcorrencias.frx":0CCA
+      Column(2)       =   "frmOcorrencias.frx":0E76
+      Column(3)       =   "frmOcorrencias.frx":101E
+      Column(4)       =   "frmOcorrencias.frx":11BE
+      FormatStylesCount=   5
+      FormatStyle(1)  =   "frmOcorrencias.frx":1352
+      FormatStyle(2)  =   "frmOcorrencias.frx":147E
+      FormatStyle(3)  =   "frmOcorrencias.frx":152E
+      FormatStyle(4)  =   "frmOcorrencias.frx":15E2
+      FormatStyle(5)  =   "frmOcorrencias.frx":16BA
+      ImageCount      =   0
+      PrinterProperties=   "frmOcorrencias.frx":1772
+   End
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
 End
 Attribute VB_Name = "frmOcorrencias"
 Attribute VB_GlobalNameSpace = False
@@ -65,6 +111,7 @@ Option Explicit
 Private Sub cmdFechar_Click()
     Call Unload(Me)
 End Sub
+<<<<<<< HEAD
 
 
 Private Sub Form_Load()
@@ -110,3 +157,5 @@ Call ConectarBD
     Set cn = Nothing
 End Sub
 
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812

@@ -41,7 +41,10 @@ Begin VB.Form frmCadastrarItens
    End
    Begin VB.ComboBox cboEspecificacao 
       Appearance      =   0  'Flat
+<<<<<<< HEAD
       BackColor       =   &H80000018&
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
       Height          =   315
       Left            =   120
       TabIndex        =   4
@@ -50,7 +53,10 @@ Begin VB.Form frmCadastrarItens
    End
    Begin VB.ComboBox cboTipo 
       Appearance      =   0  'Flat
+<<<<<<< HEAD
       BackColor       =   &H80000018&
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
       Height          =   315
       Left            =   2160
       TabIndex        =   2
@@ -59,7 +65,10 @@ Begin VB.Form frmCadastrarItens
    End
    Begin VB.ComboBox cboDivisao 
       Appearance      =   0  'Flat
+<<<<<<< HEAD
       BackColor       =   &H80000018&
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
       Height          =   315
       Left            =   120
       TabIndex        =   1
@@ -247,7 +256,10 @@ Private Sub suCadastrarDivisao(ByVal vDivisao As String)
 End Sub
 
 Private Sub suListarDivisoes()
+<<<<<<< HEAD
 Call ConectarBD
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
     strSQL = "SELECT * FROM tb_Divisao WHERE Inativo=0 ORDER BY DivisaoID"
     Set rs = New ADODB.Recordset
     rs.Open strSQL, cn, adOpenForwardOnly, adLockReadOnly

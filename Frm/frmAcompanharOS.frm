@@ -1,13 +1,24 @@
 VERSION 5.00
+<<<<<<< HEAD
 Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.1#0"; "MSCOMCTL.OCX"
+=======
+Object = "{E684D8A3-716C-4E59-AA94-7144C04B0074}#1.1#0"; "GridEX20.ocx"
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
 Begin VB.Form frmAcompanharOS 
    Appearance      =   0  'Flat
    BorderStyle     =   1  'Fixed Single
    Caption         =   "Suporte Técnico - Acompanhar OS"
+<<<<<<< HEAD
    ClientHeight    =   7005
    ClientLeft      =   45
    ClientTop       =   435
    ClientWidth     =   10365
+=======
+   ClientHeight    =   6015
+   ClientLeft      =   45
+   ClientTop       =   435
+   ClientWidth     =   7935
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
    BeginProperty Font 
       Name            =   "Verdana"
       Size            =   8.25
@@ -21,6 +32,7 @@ Begin VB.Form frmAcompanharOS
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    MinButton       =   0   'False
+<<<<<<< HEAD
    ScaleHeight     =   7005
    ScaleWidth      =   10365
    StartUpPosition =   1  'CenterOwner
@@ -45,14 +57,24 @@ Begin VB.Form frmAcompanharOS
       Appearance      =   1
       NumItems        =   0
    End
+=======
+   ScaleHeight     =   6015
+   ScaleWidth      =   7935
+   StartUpPosition =   1  'CenterOwner
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
    Begin VB.CommandButton cmdSituacao 
       Appearance      =   0  'Flat
       Caption         =   "&Situação"
       Enabled         =   0   'False
       Height          =   375
       Left            =   1560
+<<<<<<< HEAD
       TabIndex        =   1
       Top             =   6480
+=======
+      TabIndex        =   10
+      Top             =   5520
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
       Width           =   1335
    End
    Begin VB.CommandButton cmdCancelar 
@@ -62,7 +84,11 @@ Begin VB.Form frmAcompanharOS
       Height          =   375
       Left            =   3120
       TabIndex        =   9
+<<<<<<< HEAD
       Top             =   6480
+=======
+      Top             =   5520
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
       Width           =   1335
    End
    Begin VB.CommandButton cmdImprimir 
@@ -72,7 +98,11 @@ Begin VB.Form frmAcompanharOS
       Height          =   375
       Left            =   4455
       TabIndex        =   8
+<<<<<<< HEAD
       Top             =   6480
+=======
+      Top             =   5520
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
       Width           =   1335
    End
    Begin VB.CommandButton cmdAceite 
@@ -82,13 +112,20 @@ Begin VB.Form frmAcompanharOS
       Height          =   375
       Left            =   120
       TabIndex        =   7
+<<<<<<< HEAD
       Top             =   6480
+=======
+      Top             =   5520
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
       Width           =   1335
    End
    Begin VB.TextBox txtOSID 
       Alignment       =   1  'Right Justify
       Appearance      =   0  'Flat
+<<<<<<< HEAD
       BackColor       =   &H80000018&
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
       Height          =   300
       Left            =   2985
       MaxLength       =   5
@@ -107,7 +144,10 @@ Begin VB.Form frmAcompanharOS
    End
    Begin VB.ComboBox cboStatus 
       Appearance      =   0  'Flat
+<<<<<<< HEAD
       BackColor       =   &H80000018&
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
       Height          =   315
       Left            =   120
       Style           =   2  'Dropdown List
@@ -119,11 +159,59 @@ Begin VB.Form frmAcompanharOS
       Appearance      =   0  'Flat
       Caption         =   "Fechar"
       Height          =   375
+<<<<<<< HEAD
       Left            =   8880
       TabIndex        =   2
       Top             =   6480
       Width           =   1335
    End
+=======
+      Left            =   6480
+      TabIndex        =   2
+      Top             =   5520
+      Width           =   1335
+   End
+   Begin GridEX20.GridEX gexOS 
+      Height          =   4575
+      Left            =   120
+      TabIndex        =   1
+      Top             =   840
+      Width           =   7695
+      _ExtentX        =   13573
+      _ExtentY        =   8070
+      Version         =   "2.0"
+      AutomaticSort   =   -1  'True
+      RecordNavigator =   -1  'True
+      BoundColumnIndex=   ""
+      ReplaceColumnIndex=   ""
+      HeaderStyle     =   2
+      MethodHoldFields=   -1  'True
+      AllowEdit       =   0   'False
+      BorderStyle     =   3
+      GroupByBoxVisible=   0   'False
+      ColumnHeaderHeight=   285
+      IntProp1        =   0
+      IntProp2        =   0
+      IntProp7        =   0
+      ColumnsCount    =   8
+      Column(1)       =   "frmAcompanharOS.frx":058A
+      Column(2)       =   "frmAcompanharOS.frx":075E
+      Column(3)       =   "frmAcompanharOS.frx":0952
+      Column(4)       =   "frmAcompanharOS.frx":0B2A
+      Column(5)       =   "frmAcompanharOS.frx":0D2A
+      Column(6)       =   "frmAcompanharOS.frx":0E86
+      Column(7)       =   "frmAcompanharOS.frx":1066
+      Column(8)       =   "frmAcompanharOS.frx":124E
+      FormatStylesCount=   5
+      FormatStyle(1)  =   "frmAcompanharOS.frx":1452
+      FormatStyle(2)  =   "frmAcompanharOS.frx":157E
+      FormatStyle(3)  =   "frmAcompanharOS.frx":162E
+      FormatStyle(4)  =   "frmAcompanharOS.frx":16E2
+      FormatStyle(5)  =   "frmAcompanharOS.frx":17BA
+      ImageCount      =   0
+      PrinterProperties=   "frmAcompanharOS.frx":1872
+   End
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
    Begin VB.Label lblOSID 
       Appearance      =   0  'Flat
       AutoSize        =   -1  'True
@@ -228,6 +316,7 @@ Private Sub cboStatus_Click()
 End Sub
 
 Private Sub cmdAceite_Click()
+<<<<<<< HEAD
 Dim itemSelecionado As ListItem
 Dim i As Integer
 Dim ValueOS2 As Long
@@ -250,6 +339,25 @@ Dim ValueOS2 As Long
     ValueOS2 = CLng(itemSelecionado.Text)
     Call frmAceite.Show(vbModal)
     Call cboStatus_Click
+=======
+Dim i As Integer
+
+    gintOSID = 0
+
+    If gexOS.RowCount = 0 Then
+        MsgBox "Não há nenhuma OS na lista!", vbOKOnly + vbExclamation, "Suporte Técnico"
+        Exit Sub
+    End If
+
+    For i = 1 To gexOS.RowCount
+        If gexOS.RowSelected(i) = True Then
+            gintOSID = gexOS.Value(1)
+            Call frmAceite.Show(vbModal)
+            Call cboStatus_Click
+        End If
+    Next
+
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
 End Sub
 
 Private Sub cmdCancelar_Click()
@@ -257,14 +365,24 @@ Dim i As Integer
 
     gintOSID = 0
     
+<<<<<<< HEAD
     If lvwChamados.ListItems.Count = 0 Then
+=======
+    If gexOS.RowCount = 0 Then
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
         MsgBox "Não há nenhum chamado listado!", vbOKOnly + vbExclamation, "Suporte Técnico"
         Exit Sub
     End If
     
+<<<<<<< HEAD
     For i = 1 To lvwChamados.ListItems.Count
         If lvwChamados.ListItems(i).Selected = True Then
             gintOSID = CLng(lvwChamados.ListItems(i).Text)
+=======
+    For i = 1 To gexOS.RowCount
+        If gexOS.RowSelected(i) = True Then
+            gintOSID = gexOS.Value(1)
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
             If MsgBox("Tem certeza que deseja cancelar a OS " & Format(gintOSID, "0000") & "?", vbYesNo + vbQuestion, "Suporte Técnico") = vbYes Then
                 'Call suCancelarOS(gintOSID)
                 Call frmCancelarOS.Show(vbModal)
@@ -280,14 +398,24 @@ Dim i As Integer
 
     gintOSID = 0
 
+<<<<<<< HEAD
     If lvwChamados.ListItems.Count = 0 Then
+=======
+    If gexOS.RowCount = 0 Then
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
         MsgBox "Não há nenhuma OS na lista!", vbOKOnly + vbExclamation, "Suporte Técnico"
         Exit Sub
     End If
     
+<<<<<<< HEAD
     For i = 1 To lvwChamados.ListItems.Count
         If lvwChamados.ListItems(i).Selected = True Then
             gintOSID = CLng(lvwChamados.ListItems(i).Text)
+=======
+    For i = 1 To gexOS.RowCount
+        If gexOS.RowSelected(i) = True Then
+            gintOSID = gexOS.Value(1)
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
             With frmSituacao
                 .txtOSID.Text = Format(gintOSID, "0000")
                 .txtOSID.Enabled = False
@@ -306,7 +434,10 @@ Dim i As Integer
 End Sub
 
 Private Sub suPesquisarSituacao(ByVal vOSID As Integer)
+<<<<<<< HEAD
 Call ConectarBD
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
     strSQL = "SELECT Situacao,DataSituacao FROM vw_Chamados WHERE OSID = " & vOSID
     Set rs = New ADODB.Recordset
     rs.Open strSQL, cn, adOpenForwardOnly, adLockReadOnly
@@ -327,14 +458,24 @@ Dim i As Integer
     
     gintOSID = 0
     
+<<<<<<< HEAD
     If lvwChamados.ListItems.Count = 0 Then
+=======
+    If gexOS.RowCount = 0 Then
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
         MsgBox "Não há nenhum chamado listado!", vbOKOnly + vbExclamation, "Suporte Técnico"
         Exit Sub
     End If
     
+<<<<<<< HEAD
     For i = 1 To lvwChamados.ListItems.Count
         If lvwChamados.ListItems(i).Selected = True Then
             gintOSID = CLng(lvwChamados.ListItems(i).Text)  ' Primeira coluna é o Text
+=======
+    For i = 1 To gexOS.RowCount
+        If gexOS.RowSelected(i) = True Then
+            gintOSID = gexOS.Value(1)
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
             Call acrOS.Show(vbModal)
         End If
     Next
@@ -360,6 +501,7 @@ Private Sub cmdPesquisar_Click()
     End If
 End Sub
 
+<<<<<<< HEAD
 Private Sub Form_Load()
      ' Definir cabeçalhos do ListView
 With Me.lvwChamados
@@ -390,6 +532,36 @@ End Sub
 
 Private Sub suCancelarOS(ByVal vOSID As Long)
 Call ConectarBD
+=======
+Private Sub gexOS_DblClick()
+Dim i As Integer
+    
+    gintOSID = 0
+    gblnTelaChamados = False
+    
+    If gexOS.RowCount = 0 Then
+        MsgBox "Não há nenhum chamado listado!", vbOKOnly + vbExclamation, "Suporte Técnico"
+        Exit Sub
+    End If
+    
+    For i = 1 To gexOS.RowCount
+        If gexOS.RowSelected(i) = True Then
+            gintOSID = gexOS.Value(1)
+            gblnTelaChamados = True
+            Call suMostrarOS(gintOSID, cboStatus.Text)
+            Call frmSuporteSistemas.Show(vbModal)
+        End If
+    Next
+    
+    gblnTelaChamados = False
+End Sub
+
+Private Sub Form_Load()
+    Call suListarStatus
+End Sub
+
+Private Sub suCancelarOS(ByVal vOSID As Long)
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
 On Error GoTo Erro
 
     strSQL = "UPDATE tb_OS SET DataCancelamento = '" & Format(Now, "dd/MM/yyyy HH:mm:ss") & "',Status = 4 WHERE OSID = " & vOSID & ""
@@ -407,7 +579,10 @@ Erro:
 End Sub
 
 Private Sub suMostrarOS(ByVal vOSID As Integer, ByVal vStatus As String)
+<<<<<<< HEAD
 Call ConectarBD
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
     strSQL = "SELECT * FROM vw_Chamados WHERE OSID = " & vOSID
     Set rs = New ADODB.Recordset
     rs.Open strSQL, cn, adOpenForwardOnly, adLockReadOnly
@@ -467,7 +642,10 @@ Call ConectarBD
 End Sub
 
 Private Function fnPesquisarOSID(ByVal vOSID As Integer, ByVal vUsuarioID As Integer, ByVal vStatus As String) As Boolean
+<<<<<<< HEAD
 Call ConectarBD
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
     fnPesquisarOSID = False
     
     If vStatus = "Em Aberto" Then
@@ -484,6 +662,7 @@ Call ConectarBD
         strSQL = "SELECT * FROM vw_Chamados WHERE OSID = " & vOSID & " AND UsuarioID = " & vUsuarioID & " AND Status = 4 ORDER BY OSID"
     End If
     
+<<<<<<< HEAD
     Call ConectarBD
     Set rs = New ADODB.Recordset
     rs.Open strSQL, cn, adOpenKeyset, adLockOptimistic
@@ -547,6 +726,25 @@ Dim strSQL As String
     Dim cn As ADODB.Connection
     Dim lvwItem As ListItem
     Dim i As Integer
+=======
+    Set rs = New ADODB.Recordset
+    rs.Open strSQL, cn, adOpenForwardOnly, adLockReadOnly
+    
+    If rs.EOF = False Then
+        gexOS.HoldFields
+        Set gexOS.ADORecordset = rs
+        fnPesquisarOSID = True
+    Else
+        gexOS.HoldFields
+        Set gexOS.ADORecordset = rs
+    End If
+    
+    rs.Close
+    Set rs = Nothing
+End Function
+
+Private Sub suListarOS(ByVal vUsuarioID As Integer, ByVal vStatus As String)
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
     
     If vStatus = "Em Aberto" Then
         strSQL = "SELECT * FROM vw_Chamados WHERE UsuarioID = " & vUsuarioID & " AND Status = 0 ORDER BY OSID"
@@ -564,6 +762,7 @@ Dim strSQL As String
         strSQL = "SELECT * FROM vw_Chamados WHERE UsuarioID = " & vUsuarioID & " AND Status = 6 ORDER BY OSID"
     End If
         
+<<<<<<< HEAD
      ' Inicializar conexão com o banco de dados
     Call ConectarBD
     
@@ -644,6 +843,22 @@ End Sub
 
 
 
+=======
+    Set rs = New ADODB.Recordset
+    rs.Open strSQL, cn, adOpenKeyset, adLockOptimistic
+    
+    If rs.EOF = False Then
+        gexOS.HoldFields
+        Set gexOS.ADORecordset = rs
+    Else
+        gexOS.HoldFields
+        Set gexOS.ADORecordset = rs
+    End If
+        
+    Set rs = Nothing
+End Sub
+
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
 Private Sub suListarStatus()
     cboStatus.AddItem "Em Aberto"
     cboStatus.AddItem "Em Análise"
@@ -654,6 +869,7 @@ Private Sub suListarStatus()
     cboStatus.AddItem "Não Validada"
 End Sub
 
+<<<<<<< HEAD
 Private Sub lvwChamados_DblClick()
 Dim i As Integer
     
@@ -678,6 +894,8 @@ Dim i As Integer
 
 End Sub
 
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
 Private Sub txtOSID_KeyPress(KeyAscii As Integer)
     If KeyAscii = vbKeyReturn Then
         If Len(Trim(txtOSID.Text)) > 0 Then

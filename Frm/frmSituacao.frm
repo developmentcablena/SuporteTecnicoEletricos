@@ -40,7 +40,10 @@ Begin VB.Form frmSituacao
    End
    Begin VB.TextBox txtComentario 
       Appearance      =   0  'Flat
+<<<<<<< HEAD
       BackColor       =   &H80000018&
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
       Height          =   2775
       Left            =   120
       MultiLine       =   -1  'True
@@ -52,7 +55,10 @@ Begin VB.Form frmSituacao
    Begin VB.TextBox txtDataAtual 
       Alignment       =   1  'Right Justify
       Appearance      =   0  'Flat
+<<<<<<< HEAD
       BackColor       =   &H80000018&
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
       Enabled         =   0   'False
       BeginProperty Font 
          Name            =   "Verdana"
@@ -72,7 +78,10 @@ Begin VB.Form frmSituacao
    Begin VB.TextBox txtOSID 
       Alignment       =   1  'Right Justify
       Appearance      =   0  'Flat
+<<<<<<< HEAD
       BackColor       =   &H80000018&
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
       Enabled         =   0   'False
       BeginProperty Font 
          Name            =   "Verdana"
@@ -301,7 +310,11 @@ Private Function fnContaSMTP() As String
     rs.Open strSQL, cn, adOpenForwardOnly, adLockReadOnly
     
     If rs.EOF = False Then
+<<<<<<< HEAD
         fnContaSMTP = Trim(rs!valor)
+=======
+        fnContaSMTP = Trim(rs!Valor)
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
     End If
     
     rs.Close
@@ -316,7 +329,11 @@ Private Function fnSenhaSMTP() As String
     rs.Open strSQL, cn, adOpenForwardOnly, adLockReadOnly
     
     If rs.EOF = False Then
+<<<<<<< HEAD
         fnSenhaSMTP = Trim(rs!valor)
+=======
+        fnSenhaSMTP = Trim(rs!Valor)
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
     End If
     
     rs.Close
@@ -359,7 +376,11 @@ Dim rs1 As New ADODB.Recordset
         rs1.Open strSQL, cn, adOpenForwardOnly, adLockReadOnly
         
         If rs1.EOF = False Then
+<<<<<<< HEAD
             fnCapturarEmailAtendente = rs1!EMail & ""
+=======
+            fnCapturarEmailAtendente = rs1!Email & ""
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
         End If
         
         rs1.Close
@@ -393,7 +414,11 @@ Private Function fnCapturarEMail(ByVal vOSID As Long) As String
     rs.Open strSQL, cn, adOpenForwardOnly, adLockReadOnly
     
     If rs.EOF = False Then
+<<<<<<< HEAD
         fnCapturarEMail = rs!EMail & ""
+=======
+        fnCapturarEMail = rs!Email & ""
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
     End If
     
     rs.Close

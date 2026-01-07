@@ -1,8 +1,15 @@
 VERSION 5.00
+<<<<<<< HEAD
 Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.1#0"; "MSCOMCTL.OCX"
 Begin VB.Form frmPrincipal 
    Appearance      =   0  'Flat
    Caption         =   "Suporte Técnico - ELÉTRICOS"
+=======
+Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCTL.OCX"
+Begin VB.Form frmPrincipal 
+   Appearance      =   0  'Flat
+   Caption         =   "Suporte Técnico - Cablena do Brasil"
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
    ClientHeight    =   8595
    ClientLeft      =   60
    ClientTop       =   450
@@ -47,14 +54,22 @@ Begin VB.Form frmPrincipal
             Alignment       =   1
             Object.Width           =   2117
             MinWidth        =   2117
+<<<<<<< HEAD
             TextSave        =   "05/01/2026"
+=======
+            TextSave        =   "27/08/2012"
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
          EndProperty
          BeginProperty Panel4 {8E3867AB-8586-11D1-B16A-00C0F0283628} 
             Style           =   5
             Alignment       =   1
             Object.Width           =   2117
             MinWidth        =   2117
+<<<<<<< HEAD
             TextSave        =   "14:54"
+=======
+            TextSave        =   "14:08"
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
          EndProperty
          BeginProperty Panel5 {8E3867AB-8586-11D1-B16A-00C0F0283628} 
             Alignment       =   1
@@ -115,15 +130,25 @@ Begin VB.Form frmPrincipal
    End
    Begin MSComctlLib.Toolbar tlbMenu 
       Align           =   1  'Align Top
+<<<<<<< HEAD
       Height          =   3240
+=======
+      Height          =   780
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
       Left            =   0
       TabIndex        =   1
       Top             =   0
       Width           =   11010
       _ExtentX        =   19420
+<<<<<<< HEAD
       _ExtentY        =   5715
       ButtonWidth     =   3122
       ButtonHeight    =   1429
+=======
+      _ExtentY        =   1376
+      ButtonWidth     =   2831
+      ButtonHeight    =   1376
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
       Style           =   1
       ImageList       =   "imlMenu"
       _Version        =   393216
@@ -238,7 +263,11 @@ Private Sub Form_Resize()
 End Sub
 
 Private Sub Form_Unload(Cancel As Integer)
+<<<<<<< HEAD
     'cn.Close
+=======
+    cn.Close
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
     Set cn = Nothing
 End Sub
 

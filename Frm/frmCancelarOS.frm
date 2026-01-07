@@ -26,7 +26,10 @@ Begin VB.Form frmCancelarOS
    Begin VB.TextBox txtOSID 
       Alignment       =   1  'Right Justify
       Appearance      =   0  'Flat
+<<<<<<< HEAD
       BackColor       =   &H80000018&
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
       Enabled         =   0   'False
       BeginProperty Font 
          Name            =   "Verdana"
@@ -62,7 +65,10 @@ Begin VB.Form frmCancelarOS
    End
    Begin VB.TextBox txtMotivo 
       Appearance      =   0  'Flat
+<<<<<<< HEAD
       BackColor       =   &H80000018&
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
       Height          =   1455
       Left            =   120
       MultiLine       =   -1  'True
@@ -146,7 +152,10 @@ Private Sub Form_Load()
 End Sub
 
 Private Sub suCancelarOS(ByVal vOSID As Integer, ByVal vMotivo As String)
+<<<<<<< HEAD
 Call ConectarBD
+=======
+>>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
     strSQL = "UPDATE tb_OS SET DataCancelamento = '" & Format(Now, "yyyy-MM-dd HH:mm") & "',Comentario='" & vMotivo & "', Status = 4 " & _
              "WHERE OSID = " & vOSID
     Set rs = New ADODB.Recordset
