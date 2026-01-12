@@ -5,12 +5,12 @@ Begin {9EB8768B-CDFA-44DF-8F3E-857A8405E1DB} acrOS
    ClientLeft      =   60
    ClientTop       =   450
    ClientWidth     =   12000
-   Icon            =   "acrOS.dsx":0000
+   Icon            =   "acrOS_ELE.dsx":0000
    StartUpPosition =   2  'CenterScreen
    WindowState     =   2  'Maximized
    _ExtentX        =   21167
    _ExtentY        =   21325
-   SectionData     =   "acrOS.dsx":076A
+   SectionData     =   "acrOS_ELE.dsx":076A
 End
 Attribute VB_Name = "acrOS"
 Attribute VB_GlobalNameSpace = False
@@ -23,10 +23,7 @@ Private rs As ADODB.Recordset
 Private strSQL As String
 
 Private Sub suGerarOS(ByVal vOSID As Integer)
-<<<<<<< HEAD
 Call ConectarBD
-=======
->>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
     strSQL = "SELECT * FROM vw_Chamados WHERE OSID = " & vOSID
     Set rs = New ADODB.Recordset
     rs.Open strSQL, cn, adOpenForwardOnly, adLockReadOnly
@@ -34,11 +31,7 @@ Call ConectarBD
     If rs.EOF = False Then
         With acrOS
             .fldOSID = Format(rs!OSID, "0000")
-<<<<<<< HEAD
             .fldDataCadastro.Text = Format(rs!Datacadastro, "dd/MM/yyyy HH:mm:ss")
-=======
-            .fldDataCadastro.Text = Format(rs!DataCadastro, "dd/MM/yyyy HH:mm:ss")
->>>>>>> 8c6a2da482b88bea820591297e72d3467bc38812
             .fldDataPrevisao.Text = Format(rs!Previsao, "dd/MM/yyyy")
             .fldSolicitante.Text = rs!Nome
             .fldDepartamento.Text = rs!Departamento
