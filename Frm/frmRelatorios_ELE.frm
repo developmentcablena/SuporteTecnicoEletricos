@@ -536,18 +536,18 @@ Private Sub cmdExportar_Click()
     ' Verifica se o usuário selecionou um arquivo
     If filePath <> "" Then
         ' Chama a função para salvar o ListView no Excel
-        Me.MousePointer = vbHourglass
         Call SaveListViewToExcel(filePath)
-         Me.MousePointer = vbDefault
+        Me.pgbProgresso = 0
+        Me.lvwRelatorio.ListItems.Clear
     End If
     Exit Sub
-
 Erro:
     MsgBox "Erro: " & Err.Description, vbCritical, "Suporte Manutenção"
     On Error Resume Next
 End Sub
 
 Private Sub SaveListViewToExcel(filePath As String)
+    Screen.MousePointer = 11
     Dim xlApp As Object
     Dim xlBook As Object
     Dim xlSheet As Object
@@ -577,7 +577,20 @@ Private Sub SaveListViewToExcel(filePath As String)
     For i = 1 To totalItems
         xlSheet.Cells(i + 1, 1).Value = Me.lvwRelatorio.ListItems(i).Text ' Primeiro subitem
         For j = 1 To Me.lvwRelatorio.ListItems(i).ListSubItems.Count
-            xlSheet.Cells(i + 1, j + 1).Value = Me.lvwRelatorio.ListItems(i).SubItems(j)
+            'xlSheet.Cells(i + 1, j + 1).Value = Me.lvwRelatorio.ListItems(i).SubItems(j)
+            Dim valor As String
+            valor = Me.lvwRelatorio.ListItems(i).SubItems(j)
+            Select Case j
+                Case 8, 9, 10, 12, 15, 17, 18, 21
+                    If Trim(valor) <> "" And IsDate(valor) Then
+                        xlSheet.Cells(i + 1, j + 1).Value = CDate(valor)
+                        xlSheet.Cells(i + 1, j + 1).NumberFormat = "dd/mm/yyyy HH:mm"
+                    Else
+                        xlSheet.Cells(i + 1, j + 1).Value = valor
+                    End If
+                Case Else
+                    xlSheet.Cells(i + 1, j + 1).Value = valor
+            End Select
         Next j
     Next i
     
@@ -593,6 +606,8 @@ Private Sub SaveListViewToExcel(filePath As String)
     Set xlSheet = Nothing
     Set xlBook = Nothing
     Set xlApp = Nothing
+    
+    Screen.MousePointer = 0
     ' Exibe a mensagem de sucesso
     MsgBox "Os dados foram salvos com sucesso em " & filePath, vbInformation, "Suporte Manutenção"
 End Sub
@@ -820,7 +835,7 @@ Dim blnRelSemanal As Boolean
         itmX.SubItems(6) = rs!Especificacao & ""       'especificação
         itmX.SubItems(7) = rs!DescricaoServico & ""    'observação
         itmX.SubItems(8) = Format(rs!Datacadastro, "dd/MM/yy HH:mm")  'data cadastro
-        itmX.SubItems(9) = Format(rs!Previsao, "dd/MM/yy HH:mm")            'necessidade
+        itmX.SubItems(9) = Format(rs!Previsao, "dd/MM/yy")            'necessidade
         itmX.SubItems(10) = IIf(IsNull(rs!PrevisaoSistemas), "", Format(rs!PrevisaoSistemas, "dd/MM/yy HH:mm")) 'PREV. SISTEMA
         If IsNull(rs!Atendente) Then
             itmX.SubItems(11) = ""
