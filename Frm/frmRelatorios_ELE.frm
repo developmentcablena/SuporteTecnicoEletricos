@@ -59,7 +59,7 @@ Begin VB.Form frmRelatorios
       Height          =   315
       ItemData        =   "frmRelatorios_ELE.frx":030A
       Left            =   3825
-      List            =   "frmRelatorios_ELE.frx":0317
+      List            =   "frmRelatorios_ELE.frx":031A
       Style           =   2  'Dropdown List
       TabIndex        =   24
       Top             =   5235
@@ -437,10 +437,14 @@ Private Sub cboEspecificacao_Click()
     
 End Sub
 
+
+
+
+
 Private Sub cboStatus_Click()
     
     If cboStatus.Text = "Relatório Semanal" Then
-        cboRelOS.ListIndex = 2
+        cboRelOS.ListIndex = 3
     Else
        
         cboRelOS.ListIndex = 0
@@ -520,6 +524,7 @@ Private Sub cmdExportar_Click()
         .Filter = "Pasta de Trabalho do Microsoft Office Excel (*.xls)|*.xls|All Files (*.*)|*.*" 'Excel Files
         .FilterIndex = 1
         .Flags = cdlOFNOverwritePrompt
+        .filename = "OS´s Elétricos"
         On Error Resume Next
         .ShowSave
         If Err.Number <> 0 Then
@@ -536,9 +541,15 @@ Private Sub cmdExportar_Click()
     ' Verifica se o usuário selecionou um arquivo
     If filePath <> "" Then
         ' Chama a função para salvar o ListView no Excel
-        Call SaveListViewToExcel(filePath)
-        Me.pgbProgresso = 0
-        Me.lvwRelatorio.ListItems.Clear
+        If Trim(cboRelOS.Text) = "Semanal - Welsio" Then
+            Call SaveListViewToExcel_WELSIO(filePath)
+            Me.pgbProgresso = 0
+            Me.lvwRelatorio.ListItems.Clear
+        Else
+            Call SaveListViewToExcel(filePath)
+            Me.pgbProgresso = 0
+            Me.lvwRelatorio.ListItems.Clear
+        End If
     End If
     Exit Sub
 Erro:
@@ -593,10 +604,97 @@ Private Sub SaveListViewToExcel(filePath As String)
             End Select
         Next j
     Next i
+   
+    ' ======= FORMATAÇÃO FINAL (SEM QUEBRA DE TEXTO) =======
+    With xlSheet.UsedRange
+        .WrapText = False           ' garante que NÃO vai quebrar texto
+        .EntireColumn.AutoFit       ' ajusta automaticamente a largura das colunas
+        .EntireRow.AutoFit        ' se quiser ajustar altura também, pode deixar
+    End With
+
+    xlBook.SaveAs filePath
     
-    ' Ajusta a largura das colunas automaticamente
-    xlSheet.Columns.AutoFit
-    ' Salva o arquivo Excel
+    xlBook.Close False
+    xlApp.Quit
+    
+    ' Libera a memória
+    Set xlSheet = Nothing
+    Set xlBook = Nothing
+    Set xlApp = Nothing
+    
+    Screen.MousePointer = 0
+    ' Exibe a mensagem de sucesso
+    MsgBox "Os dados foram salvos com sucesso em " & filePath, vbInformation, "Suporte Manutenção"
+End Sub
+
+Private Sub SaveListViewToExcel_WELSIO(filePath As String)
+    Screen.MousePointer = 11
+    Dim xlApp As Object
+    Dim xlBook As Object
+    Dim xlSheet As Object
+    Dim i As Integer
+    Dim j As Integer
+    Dim totalItems As Integer
+    Dim currentItem As Integer
+    ' Cria uma nova instância do Excel
+    Set xlApp = CreateObject("Excel.Application")
+    Set xlBook = xlApp.Workbooks.Add
+    Set xlSheet = xlBook.Worksheets(1)
+    ' Copia os cabeçalhos das colunas do ListView para a planilha
+    For i = 1 To Me.lvwRelatorio.ColumnHeaders.Count
+        xlSheet.Cells(1, i).Value = Me.lvwRelatorio.ColumnHeaders(i).Text
+    Next i
+    ' Formata os cabeçalhos em negrito e centralizado
+    With xlSheet.Range(xlSheet.Cells(1, 1), xlSheet.Cells(1, Me.lvwRelatorio.ColumnHeaders.Count))
+        .Font.Bold = True
+        .HorizontalAlignment = -4108 ' xlCenter
+        .Interior.Color = RGB(222, 212, 27)
+        .WrapText = True
+    End With
+    ' Obtém o total de itens para a barra de progresso
+    totalItems = Me.lvwRelatorio.ListItems.Count
+
+    ' Copia os itens do ListView para a planilha
+    For i = 1 To totalItems
+        xlSheet.Cells(i + 1, 1).Value = Me.lvwRelatorio.ListItems(i).Text ' Primeiro subitem
+        For j = 1 To Me.lvwRelatorio.ListItems(i).ListSubItems.Count
+            'xlSheet.Cells(i + 1, j + 1).Value = Me.lvwRelatorio.ListItems(i).SubItems(j)
+            Dim valor As String
+            valor = Me.lvwRelatorio.ListItems(i).SubItems(j)
+            Select Case j
+                Case 8, 9, 10, 12, 15, 17, 18, 21
+                    If Trim(valor) <> "" And IsDate(valor) Then
+                        xlSheet.Cells(i + 1, j + 1).Value = CDate(valor)
+                        xlSheet.Cells(i + 1, j + 1).NumberFormat = "dd/mm/yyyy HH:mm"
+                    Else
+                        xlSheet.Cells(i + 1, j + 1).Value = valor
+                    End If
+                Case Else
+                    xlSheet.Cells(i + 1, j + 1).Value = valor
+            End Select
+        Next j
+        
+        ' >>> DEPOIS DE PREENCHER A LINHA, VERIFICA A COLUNA G <<<
+        ' Coluna G = 7
+        Dim textoColunaG As String
+        textoColunaG = CStr(xlSheet.Cells(i + 1, 7).Value)
+        
+        ' 1) Primeiro: cor padrão LARANJA para todas as linhas de dados
+        xlSheet.Rows(i + 1).Interior.Color = RGB(255, 192, 0) ' laranja
+
+        ' 2) Se a célula da coluna G contiver "Starsoft Applications", muda para AMARELO
+        If InStr(1, textoColunaG, "Starsoft Applications", vbTextCompare) > 0 Then
+            xlSheet.Rows(i + 1).Interior.Color = RGB(255, 255, 0) ' amarelo
+        End If
+        ' >>> FIM DA REGRA DE COR <<<
+    Next i
+    ' ======= FORMATAÇÃO FINAL (SEM QUEBRA DE TEXTO) =======
+    With xlSheet.UsedRange
+        .WrapText = False           ' garante que NÃO vai quebrar texto
+        .EntireColumn.AutoFit       ' ajusta automaticamente a largura das colunas
+        .EntireRow.AutoFit        ' se quiser ajustar altura também, pode deixar
+    End With
+
     xlBook.SaveAs filePath
     
     xlBook.Close False
@@ -659,6 +757,8 @@ Private Sub cmdGerar_Click()
     End If
     
     If cboRelOS.Text = "Semanal" Then
+        Call suGerarRelatorioDetalhado(Left(cboDivisao.Text, 4), Left(cboTipo.Text, 4), Left(cboEspecificacao.Text, 4), Left(cboUsuario.Text, 4), cboStatus.Text, txtDataCadDe.Text, txtDataCadAte.Text)
+    ElseIf Me.cboRelOS.Text = "Semanal - Welsio" Then
         Call suGerarRelatorioDetalhado(Left(cboDivisao.Text, 4), Left(cboTipo.Text, 4), Left(cboEspecificacao.Text, 4), Left(cboUsuario.Text, 4), cboStatus.Text, txtDataCadDe.Text, txtDataCadAte.Text)
     Else
         MsgBox "Relatório Indisponivel!!", vbOKOnly + vbInformation, "Suporte Técnico"
