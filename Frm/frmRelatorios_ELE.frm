@@ -1,6 +1,6 @@
 VERSION 5.00
 Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.1#0"; "MSCOMCTL.OCX"
-Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "comdlg32.OCX"
+Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "COMDLG32.OCX"
 Begin VB.Form frmRelatorios 
    Appearance      =   0  'Flat
    BorderStyle     =   1  'Fixed Single
@@ -524,7 +524,7 @@ Private Sub cmdExportar_Click()
         .Filter = "Pasta de Trabalho do Microsoft Office Excel (*.xls)|*.xls|All Files (*.*)|*.*" 'Excel Files
         .FilterIndex = 1
         .Flags = cdlOFNOverwritePrompt
-        .filename = "OS´s Elétricos"
+        .filename = "OSs Elétricos"
         On Error Resume Next
         .ShowSave
         If Err.Number <> 0 Then
@@ -578,7 +578,7 @@ Private Sub SaveListViewToExcel(filePath As String)
     With xlSheet.Range(xlSheet.Cells(1, 1), xlSheet.Cells(1, Me.lvwRelatorio.ColumnHeaders.Count))
         .Font.Bold = True
         .HorizontalAlignment = -4108 ' xlCenter
-        .Interior.Color = RGB(222, 212, 27)
+        '.Interior.Color = RGB(222, 212, 27)
         .WrapText = True
     End With
     ' Obtém o total de itens para a barra de progresso
@@ -648,7 +648,7 @@ Private Sub SaveListViewToExcel_WELSIO(filePath As String)
     With xlSheet.Range(xlSheet.Cells(1, 1), xlSheet.Cells(1, Me.lvwRelatorio.ColumnHeaders.Count))
         .Font.Bold = True
         .HorizontalAlignment = -4108 ' xlCenter
-        .Interior.Color = RGB(222, 212, 27)
+        '.Interior.Color = RGB(222, 212, 27)
         .WrapText = True
     End With
     ' Obtém o total de itens para a barra de progresso
@@ -680,7 +680,7 @@ Private Sub SaveListViewToExcel_WELSIO(filePath As String)
         textoColunaG = CStr(xlSheet.Cells(i + 1, 7).Value)
         
         ' 1) Primeiro: cor padrão LARANJA para todas as linhas de dados
-        xlSheet.Rows(i + 1).Interior.Color = RGB(255, 192, 0) ' laranja
+        'xlSheet.Rows(i + 1).Interior.Color = RGB(255, 192, 0) ' laranja
 
         ' 2) Se a célula da coluna G contiver "Starsoft Applications", muda para AMARELO
         If InStr(1, textoColunaG, "Starsoft Applications", vbTextCompare) > 0 Then
