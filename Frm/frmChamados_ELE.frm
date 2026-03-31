@@ -314,7 +314,7 @@ Private Sub cboStatus_Click()
             cmdBaixarOS.Enabled = True
             cmdImprimir.Enabled = True
             cmdBaixarOS.Enabled = True
-            cmdSituacao.Visible = False
+            cmdSituacao.Visible = True
             chkComentario.Caption = "Visualizar Motivo"
             chkComentario.Value = 0
             chkComentario.Enabled = True
@@ -703,10 +703,31 @@ With Me.lvwChamados
     .ColumnHeaders.Add , , "Data Aceite", Width:=2000
     .ColumnHeaders.Add , , "Data Cancel", Width:=2000
     .LabelEdit = lvwManual
+    .Sorted = True
+    .SortKey = 0
+    .SortOrder = lvwAscending
 End With
     Call suListarStatus
 'Me.ckOrdem.Enabled = False
 End Sub
+
+Private Sub lvwChamados_ColumnClick(ByVal ColumnHeader As MSComctlLib.ColumnHeader)
+    If lvwChamados.SortKey = ColumnHeader.index - 1 Then
+        ' Se já está ordenando por essa coluna ? inverter
+        If lvwChamados.SortOrder = lvwAscending Then
+            lvwChamados.SortOrder = lvwDescending
+        Else
+            lvwChamados.SortOrder = lvwAscending
+        End If
+    Else
+        ' Se é coluna nova ? ordenar crescente
+        lvwChamados.SortKey = ColumnHeader.index - 1
+        lvwChamados.SortOrder = lvwAscending
+    End If
+
+    lvwChamados.Sorted = True
+End Sub
+
 
 Private Sub cmdPesquisar_Click()
     If Len(Trim(cboStatus.Text)) = 0 Then
@@ -1040,7 +1061,7 @@ Dim frm As New frmOcorrencias
     
         For i = 1 To lvwChamados.ListItems.Count
             If Me.lvwChamados.ListItems(i).Selected = True Then
-                gintOSID = lvwChamados.ListItems(1).Text
+                gintOSID = lvwChamados.ListItems(i).Text
                 'Call suMostrarOcorrencia(gintOSID)
                 Call frmOcorrencias.Show(vbModal)
             End If
