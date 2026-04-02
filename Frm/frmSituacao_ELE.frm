@@ -273,6 +273,8 @@ Dim poSendMail As vbSendMail.clsSendMail
         poSendMail.Subject = "OS " & Format(vOSID, "0000") & " em Análise"
     ElseIf gstrcboStatus = "Em Atendimento" Then
         poSendMail.Subject = "OS " & Format(vOSID, "0000") & " em Atendimento"
+    ElseIf gstrcboStatus = "Não Validada" Then
+        poSendMail.Subject = "OS " & Format(vOSID, "0000") & " não validada"
     End If
     poSendMail.Priority = HIGH_PRIORITY
     Call suRelatorio(vOSID)
