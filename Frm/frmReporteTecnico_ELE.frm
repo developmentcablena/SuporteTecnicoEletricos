@@ -1,5 +1,5 @@
 VERSION 5.00
-Object = "{C932BA88-4374-101B-A56C-00AA003668DC}#1.1#0"; "msmask32.OCX"
+Object = "{C932BA88-4374-101B-A56C-00AA003668DC}#1.1#0"; "MSMASK32.OCX"
 Begin VB.Form frmReporteTecnico 
    Appearance      =   0  'Flat
    BackColor       =   &H80000004&
@@ -281,6 +281,8 @@ Private Sub Form_Load()
     With Me
         .txtOSID.Text = Format(gintOSID, "0000")
     End With
+    
+    Me.mskDataBaixa.Text = Format(Now, "dd/mm/yyyy HH:mm")
 End Sub
 
 Private Function fnCapturarEmailAtendente(ByVal vOSID As Long) As String
