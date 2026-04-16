@@ -677,7 +677,7 @@ Private Sub SaveListViewToExcel_WELSIO(filePath As String)
         ' >>> DEPOIS DE PREENCHER A LINHA, VERIFICA A COLUNA G <<<
         ' Coluna G = 7
         Dim textoColunaG As String
-        textoColunaG = CStr(xlSheet.Cells(i + 1, 7).Value)
+        textoColunaG = CStr(xlSheet.Cells(i + 1, 8).Value)
         
         ' 1) Primeiro: cor padrão LARANJA para todas as linhas de dados
         'xlSheet.Rows(i + 1).Interior.Color = RGB(255, 192, 0) ' laranja
@@ -771,6 +771,7 @@ Private Sub Form_Load()
 With Me.lvwRelatorio
     .ListItems.Clear
     .ColumnHeaders.Add , , "SOLICITANTE", 2000     '0
+    .ColumnHeaders.Add , , "EMAIL", 2000
     .ColumnHeaders.Add , , "DEPTO.", 2000    '1
     .ColumnHeaders.Add , , "OS", 2000
     .ColumnHeaders.Add , , "STATUS", 2000
@@ -794,13 +795,12 @@ With Me.lvwRelatorio
     .ColumnHeaders.Add , , "DATA SITUAÇÃO", 2000
     .ColumnHeaders.Add , , "ATENDIDO", 2000
    
-
 End With
-
 
     Call suListarDivisao
     Call suListarStatus
     Call suListarUsuarios
+    Me.cboStatus.ListIndex = 8
 End Sub
 
 Private Sub suGerarRelatorioLista(ByVal vTipoID As String, ByVal vCaractID As String, ByVal vEspecID As String, ByVal vUsuarioID As String, ByVal vStatus As String, ByVal vDataCadDe As Variant, ByVal vDataCadAte As Variant)
@@ -808,7 +808,7 @@ Private Sub suGerarRelatorioLista(ByVal vTipoID As String, ByVal vCaractID As St
 End Sub
 
 
-Private Sub suGerarRelatorioDetalhado(ByVal vTipoID As String, ByVal vCaractID As String, ByVal vEspecID As String, ByVal vUsuarioID As String, ByVal vStatus As String, ByVal vDataCadDe As Variant, ByVal vDataCadAte As Variant)
+Private Sub     (ByVal vTipoID As String, ByVal vCaractID As String, ByVal vEspecID As String, ByVal vUsuarioID As String, ByVal vStatus As String, ByVal vDataCadDe As Variant, ByVal vDataCadAte As Variant)
 Me.lvwRelatorio.ListItems.Clear
 Me.pgbProgresso.Value = 0
 On Error GoTo Erro
@@ -911,8 +911,9 @@ Dim blnRelSemanal As Boolean
     Do While Not rs.EOF
         Dim itmX As ListItem
         Set itmX = lvwRelatorio.ListItems.Add(, , rs!Nome & "")    'SOLICITANTE
-        itmX.SubItems(1) = rs!Departamento & ""                     'DEPARTAMENTO
-        itmX.SubItems(2) = CStr(Format(rs!OSID, "0000")) & ""       'OS
+        itmX.SubItems(1) = rs!Email
+        itmX.SubItems(2) = rs!Departamento & ""                     'DEPARTAMENTO
+        itmX.SubItems(3) = CStr(Format(rs!OSID, "0000")) & ""       'OS
         
         Select Case rs!Status
             Case 0
@@ -929,21 +930,21 @@ Dim blnRelSemanal As Boolean
                 strStatus = "Não Validada"
         End Select
         
-        itmX.SubItems(3) = strStatus & ""           'STATUS
-        itmX.SubItems(4) = rs!Divisao & ""          'TIPO
-        itmX.SubItems(5) = rs!Tipo & ""             'caracteristica
-        itmX.SubItems(6) = rs!Especificacao & ""       'especificação
-        itmX.SubItems(7) = rs!DescricaoServico & ""    'observação
-        itmX.SubItems(8) = Format(rs!Datacadastro, "dd/MM/yy HH:mm")  'data cadastro
-        itmX.SubItems(9) = Format(rs!Previsao, "dd/MM/yy")            'necessidade
-        itmX.SubItems(10) = IIf(IsNull(rs!PrevisaoSistemas), "", Format(rs!PrevisaoSistemas, "dd/MM/yy HH:mm")) 'PREV. SISTEMA
+        itmX.SubItems(4) = strStatus & ""           'STATUS
+        itmX.SubItems(5) = rs!Divisao & ""          'TIPO
+        itmX.SubItems(6) = rs!Tipo & ""             'caracteristica
+        itmX.SubItems(7) = rs!Especificacao & ""       'especificação
+        itmX.SubItems(8) = rs!DescricaoServico & ""    'observação
+        itmX.SubItems(9) = Format(rs!Datacadastro, "dd/MM/yy HH:mm")  'data cadastro
+        itmX.SubItems(10) = Format(rs!Previsao, "dd/MM/yy")            'necessidade
+        itmX.SubItems(11) = IIf(IsNull(rs!PrevisaoSistemas), "", Format(rs!PrevisaoSistemas, "dd/MM/yy HH:mm")) 'PREV. SISTEMA
         If IsNull(rs!Atendente) Then
-            itmX.SubItems(11) = ""
+            itmX.SubItems(12) = ""
         Else
-            itmX.SubItems(11) = rs!Atendente   'ATENDENTE
+            itmX.SubItems(12) = rs!Atendente   'ATENDENTE
         End If
         
-        itmX.SubItems(12) = IIf(IsNull(rs!DataBaixa), "", Format(rs!DataBaixa, "dd/MM/yy HH:mm"))       'DATA FINAL.
+        itmX.SubItems(13) = IIf(IsNull(rs!DataBaixa), "", Format(rs!DataBaixa, "dd/MM/yy HH:mm"))       'DATA FINAL.
         
         Select Case rs!Prazo
             Case 0
@@ -952,47 +953,42 @@ Dim blnRelSemanal As Boolean
                 strPrazo = "Atrasado"
         End Select
         
-        itmX.SubItems(13) = strPrazo                                                                                'PRAZO
+        itmX.SubItems(14) = strPrazo                                                                                'PRAZO
         If IsNull(rs!ReporteTecnico) Then
-            itmX.SubItems(14) = ""
+            itmX.SubItems(15) = ""
         Else
-            itmX.SubItems(14) = rs!ReporteTecnico                                                  'REPORTE TECNICO
+            itmX.SubItems(15) = rs!ReporteTecnico                                                  'REPORTE TECNICO
         End If
         
-        itmX.SubItems(15) = IIf(IsNull(rs!DataAceite), "", Format(rs!DataAceite, "dd/MM/yy HH:mm"))                     'DATA ACEITE
+        itmX.SubItems(16) = IIf(IsNull(rs!DataAceite), "", Format(rs!DataAceite, "dd/MM/yy HH:mm"))                     'DATA ACEITE
         
         If IsNull(rs!Comentario) Then
-            itmX.SubItems(16) = ""
+            itmX.SubItems(17) = ""
         Else
-            itmX.SubItems(16) = rs!Comentario                                                        'COMENTARIO
+            itmX.SubItems(17) = rs!Comentario                                                        'COMENTARIO
         End If
         
-        itmX.SubItems(17) = IIf(IsNull(rs!DataCancelamento), "", Format(rs!DataCancelamento, "dd/MM/yy HH:mm")) ' DATA CANCELAMENTO
-        itmX.SubItems(18) = IIf(IsNull(rs!DataOSNaoValidada), "", Format(rs!DataOSNaoValidada, "dd/MM/yy HH:mm")) ' DATA OS NÃO VALIDADA
+        itmX.SubItems(18) = IIf(IsNull(rs!DataCancelamento), "", Format(rs!DataCancelamento, "dd/MM/yy HH:mm")) ' DATA CANCELAMENTO
+        itmX.SubItems(19) = IIf(IsNull(rs!DataOSNaoValidada), "", Format(rs!DataOSNaoValidada, "dd/MM/yy HH:mm")) ' DATA OS NÃO VALIDADA
         
         If IsNull(rs!MotivoOSNaoValidada) Then
-            itmX.SubItems(19) = ""
+            itmX.SubItems(20) = ""
         Else
-            itmX.SubItems(19) = rs!MotivoOSNaoValidada                                                        'COMENTARIO
+            itmX.SubItems(20) = rs!MotivoOSNaoValidada                                                        'COMENTARIO
         End If
         
         If IsNull(rs!Situacao) Then
-            itmX.SubItems(20) = ""
+            itmX.SubItems(21) = ""
         Else
-            itmX.SubItems(20) = rs!Situacao                                                        'COMENTARIO
+            itmX.SubItems(21) = rs!Situacao                                                        'COMENTARIO
         End If
         
-        itmX.SubItems(21) = IIf(IsNull(rs!DataSituacao), "", Format(rs!DataSituacao, "dd/MM/yy HH:mm")) ' DATA SITUACAO
+        itmX.SubItems(22) = IIf(IsNull(rs!DataSituacao), "", Format(rs!DataSituacao, "dd/MM/yy HH:mm")) ' DATA SITUACAO
                                                                                                         'ATENDIDO
-        
-               
             pgbProgresso.Value = rs.AbsolutePosition
             rs.MoveNext
         Loop
-        
-        
-    
-    
+  
    rs.Close
     Set rs = Nothing
     Screen.MousePointer = 0
